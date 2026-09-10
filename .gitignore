@@ -85,6 +85,7 @@ data/quarantine/**
 # Keep small project evidence/report CSV files
 !reports/acquisition/*.csv
 !reports/reconciliation/*.csv
+!reports/raw_integrity/*.csv
 *.json
 *.geojson
 *.shp
