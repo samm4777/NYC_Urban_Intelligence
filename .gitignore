@@ -1,0 +1,111 @@
+# ============================================================
+# NYC Urban Intelligence Platform
+# Git Ignore Rules
+# ============================================================
+
+# ----------------------------
+# Python
+# ----------------------------
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+
+# ----------------------------
+# Environment / Secrets
+# ----------------------------
+.env
+.env.local
+*.secret
+*.secrets
+
+# ----------------------------
+# IDE / Editor
+# ----------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ----------------------------
+# Operating System
+# ----------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ----------------------------
+# Spark
+# ----------------------------
+spark-warehouse/
+metastore_db/
+derby.log
+.sparkStaging/
+*.crc
+
+# ----------------------------
+# Airflow Local Metadata
+# ----------------------------
+airflow/airflow.db
+airflow/airflow.cfg
+airflow/logs/
+airflow/*.pid
+
+# ----------------------------
+# Docker Local Volumes
+# ----------------------------
+docker/volumes/
+docker/data/
+*.pid
+
+# ----------------------------
+# Data Lake Files
+# Do not commit large/raw datasets
+# ----------------------------
+data/raw/**
+data/bronze/**
+data/silver/**
+data/gold/**
+data/quarantine/**
+
+# Keep directory structure
+!data/raw/.gitkeep
+!data/bronze/.gitkeep
+!data/silver/.gitkeep
+!data/gold/.gitkeep
+!data/quarantine/.gitkeep
+
+# Common data formats
+*.parquet
+*.csv
+*.json
+*.geojson
+*.shp
+*.shx
+*.dbf
+*.prj
+*.zip
+
+# ----------------------------
+# Logs
+# ----------------------------
+*.log
+logs/
+
+# ----------------------------
+# Power BI Temporary Files
+# ----------------------------
+~$*.pbix
+*.pbix.tmp
+*.pbit.tmp
+
+# ----------------------------
+# Python Build Files
+# ----------------------------
+build/
+dist/
+*.egg-info/
