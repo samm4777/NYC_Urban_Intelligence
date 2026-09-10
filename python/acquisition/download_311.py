@@ -8,6 +8,8 @@ from pathlib import Path
 
 import requests
 from dotenv import load_dotenv
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 
 # ---------------------------------------------------------
@@ -72,6 +74,48 @@ MANIFEST_FILE = (
 
 
 # ---------------------------------------------------------
+# HTTP session with retry support
+# ---------------------------------------------------------
+
+def create_session():
+
+    session = requests.Session()
+
+    retry_strategy = Retry(
+        total=5,
+        connect=5,
+        read=5,
+        status=5,
+        backoff_factor=2,
+        status_forcelist=[
+            429,
+            500,
+            502,
+            503,
+            504,
+        ],
+        allowed_methods=["GET"],
+        raise_on_status=False,
+    )
+
+    adapter = HTTPAdapter(
+        max_retries=retry_strategy
+    )
+
+    session.mount(
+        "https://",
+        adapter,
+    )
+
+    session.mount(
+        "http://",
+        adapter,
+    )
+
+    return session
+
+
+# ---------------------------------------------------------
 # Date helpers
 # ---------------------------------------------------------
 
@@ -85,13 +129,16 @@ def month_range(year, month):
     )
 
     if month == 12:
+
         end = datetime(
             year + 1,
             1,
             1,
             tzinfo=timezone.utc,
         )
+
     else:
+
         end = datetime(
             year,
             month + 1,
@@ -103,11 +150,14 @@ def month_range(year, month):
 
 
 def socrata_timestamp(value):
-    return value.strftime("%Y-%m-%dT%H:%M:%S.000")
+
+    return value.strftime(
+        "%Y-%m-%dT%H:%M:%S.000"
+    )
 
 
 # ---------------------------------------------------------
-# Manifest
+# Manifest writer
 # ---------------------------------------------------------
 
 def write_manifest(record):
@@ -150,7 +200,52 @@ def write_manifest(record):
 
 
 # ---------------------------------------------------------
-# Download month
+# Validate existing Raw page
+# ---------------------------------------------------------
+
+def read_existing_page(file_path):
+
+    try:
+
+        with open(
+            file_path,
+            "r",
+            encoding="utf-8",
+        ) as file:
+
+            records = json.load(file)
+
+        if not isinstance(records, list):
+            raise ValueError(
+                "Existing Raw file does not "
+                "contain a JSON array."
+            )
+
+        return len(records)
+
+    except (
+        json.JSONDecodeError,
+        UnicodeDecodeError,
+        ValueError,
+    ):
+
+        print(
+            f"Existing page is invalid: "
+            f"{file_path.name}"
+        )
+
+        print(
+            "Removing invalid page so it "
+            "can be downloaded again."
+        )
+
+        file_path.unlink()
+
+        return None
+
+
+# ---------------------------------------------------------
+# Download one month
 # ---------------------------------------------------------
 
 def download_month(month):
@@ -184,33 +279,58 @@ def download_month(month):
         exist_ok=True,
     )
 
-    headers = {}
+    headers = {
+        "Accept": "application/json"
+    }
 
     if NYC311_API_TOKEN:
+
         headers["X-App-Token"] = (
             NYC311_API_TOKEN
         )
 
+    session = create_session()
+
     offset = 0
     page_number = 1
     total_rows = 0
+    resumed_pages = 0
+    downloaded_pages = 0
+
+    current_file_name = ""
+    current_offset = 0
+    current_page_number = 1
 
     print()
     print("=" * 70)
+
     print(
         f"Downloading NYC 311 "
         f"{YEAR}-{month_text}"
     )
+
     print(
         f"Query range: "
         f"{query_start} -> {query_end}"
     )
-    print(f"Run ID: {run_id}")
+
+    print(
+        f"Page size: {PAGE_SIZE:,}"
+    )
+
+    print(
+        f"Run ID: {run_id}"
+    )
+
     print("=" * 70)
 
     try:
 
         while True:
+
+            # -------------------------------------------------
+            # Build Raw page filename
+            # -------------------------------------------------
 
             file_name = (
                 f"311_{YEAR}_{month_text}_"
@@ -222,24 +342,88 @@ def download_month(month):
                 / file_name
             )
 
+            temporary_file = (
+                destination_dir
+                / f"{file_name}.part"
+            )
+
+            current_file_name = file_name
+            current_offset = offset
+            current_page_number = page_number
+
+            # -------------------------------------------------
+            # Resume support
+            # -------------------------------------------------
+
+            if destination_file.exists():
+
+                existing_count = (
+                    read_existing_page(
+                        destination_file
+                    )
+                )
+
+                if existing_count is not None:
+
+                    print(
+                        f"Page already exists | "
+                        f"Page {page_number} | "
+                        f"Offset {offset:,} | "
+                        f"Rows {existing_count:,}"
+                    )
+
+                    total_rows += existing_count
+                    resumed_pages += 1
+
+                    # Existing final page
+                    if existing_count < PAGE_SIZE:
+                        break
+
+                    offset += PAGE_SIZE
+                    page_number += 1
+
+                    continue
+
+            # Remove an abandoned partial file
+            if temporary_file.exists():
+
+                print(
+                    f"Removing incomplete temporary file: "
+                    f"{temporary_file.name}"
+                )
+
+                temporary_file.unlink()
+
+            # -------------------------------------------------
+            # API query
+            # -------------------------------------------------
+
             params = {
+
                 "$where": (
                     f"created_date >= "
                     f"'{query_start}' "
                     f"AND created_date < "
                     f"'{query_end}'"
                 ),
+
                 "$limit": PAGE_SIZE,
+
                 "$offset": offset,
-                "$order": "created_date,unique_key",
+
+                "$order": (
+                    "created_date ASC,"
+                    "unique_key ASC"
+                ),
             }
 
             print(
-                f"Page {page_number} | "
+                f"Requesting page "
+                f"{page_number} | "
                 f"Offset {offset:,}"
             )
 
-            response = requests.get(
+            response = session.get(
                 BASE_URL,
                 params=params,
                 headers=headers,
@@ -250,21 +434,33 @@ def download_month(month):
 
             records = response.json()
 
+            if not isinstance(records, list):
+
+                raise ValueError(
+                    "NYC 311 API response "
+                    "was not a JSON array."
+                )
+
             row_count = len(records)
 
-            # ---------------------------------------------
-            # No more records
-            # ---------------------------------------------
+            # -------------------------------------------------
+            # No additional records
+            # -------------------------------------------------
 
             if row_count == 0:
+
+                print(
+                    "No additional records returned."
+                )
+
                 break
 
-            # ---------------------------------------------
-            # Preserve Raw API response
-            # ---------------------------------------------
+            # -------------------------------------------------
+            # Write Raw response safely
+            # -------------------------------------------------
 
             with open(
-                destination_file,
+                temporary_file,
                 "w",
                 encoding="utf-8",
             ) as file:
@@ -275,9 +471,20 @@ def download_month(month):
                     ensure_ascii=False,
                 )
 
+            # Only make it a real Raw page after
+            # the write completes successfully.
+            temporary_file.replace(
+                destination_file
+            )
+
             retrieval_time = utc_now()
 
             total_rows += row_count
+            downloaded_pages += 1
+
+            # -------------------------------------------------
+            # Acquisition manifest
+            # -------------------------------------------------
 
             write_manifest(
                 {
@@ -303,12 +510,19 @@ def download_month(month):
                 f"{row_count:,} rows"
             )
 
-            # Last page
+            # -------------------------------------------------
+            # Final page
+            # -------------------------------------------------
+
             if row_count < PAGE_SIZE:
                 break
 
             offset += PAGE_SIZE
             page_number += 1
+
+        # -----------------------------------------------------
+        # Successful monthly run
+        # -----------------------------------------------------
 
         finished_at = utc_now()
 
@@ -328,18 +542,60 @@ def download_month(month):
         )
 
         print("-" * 70)
+
         print(
-            f"Month complete."
+            "Month complete."
         )
+
         print(
             f"Total rows: "
             f"{total_rows:,}"
         )
+
+        print(
+            f"Existing pages reused: "
+            f"{resumed_pages}"
+        )
+
+        print(
+            f"New pages downloaded: "
+            f"{downloaded_pages}"
+        )
+
         print("-" * 70)
 
     except Exception as exc:
 
         finished_at = utc_now()
+
+        error_message = str(exc)
+
+        # -----------------------------------------------------
+        # Record failed page in acquisition manifest
+        # -----------------------------------------------------
+
+        write_manifest(
+            {
+                "run_id": run_id,
+                "source": "nyc_311",
+                "year": YEAR,
+                "month": month_text,
+                "query_start": query_start,
+                "query_end": query_end,
+                "page_size": PAGE_SIZE,
+                "offset": current_offset,
+                "page_number": current_page_number,
+                "file_name": current_file_name,
+                "row_count": 0,
+                "retrieval_timestamp_utc": utc_now(),
+                "status": "FAILED",
+                "error_message": error_message,
+            }
+        )
+
+        # -----------------------------------------------------
+        # Run-level failure log
+        # -----------------------------------------------------
 
         write_run_log(
             run_id=run_id,
@@ -353,14 +609,18 @@ def download_month(month):
             rows_valid=total_rows,
             rows_rejected=0,
             status="FAILED",
-            error_message=str(exc),
+            error_message=error_message,
         )
 
         print(
-            f"FAILED: {exc}"
+            f"FAILED: {error_message}"
         )
 
         raise
+
+    finally:
+
+        session.close()
 
 
 # ---------------------------------------------------------
@@ -380,10 +640,12 @@ def main():
         "--months",
         nargs="+",
         type=int,
-        default=list(range(1, 13)),
+        default=list(
+            range(1, 13)
+        ),
         help=(
             "Months to download. "
-            "Example: --months 1 2"
+            "Example: --months 1 2 3"
         ),
     )
 
@@ -392,8 +654,11 @@ def main():
     for month in args.months:
 
         if month < 1 or month > 12:
+
             raise ValueError(
-                f"Invalid month: {month}"
+                f"Invalid month: {month}. "
+                f"Month must be between "
+                f"1 and 12."
             )
 
         download_month(month)
