@@ -1,0 +1,46 @@
+{
+  "run_id": "4bd254ab-4f2b-40d1-a00f-4ab6597b67ec",
+  "source": "open_meteo_weather",
+  "profile_year": 2025,
+  "started_at": "2026-09-10T12:03:13.390567+00:00",
+  "finished_at": "2026-09-10T12:03:14.357406+00:00",
+  "raw_file_count": 12,
+  "row_count": 8760,
+  "expected_row_count": 8760,
+  "row_count_match": true,
+  "column_count": 10,
+  "hourly_columns": [
+    "time",
+    "temperature_2m",
+    "relative_humidity_2m",
+    "apparent_temperature",
+    "precipitation",
+    "rain",
+    "snowfall",
+    "weather_code",
+    "wind_speed_10m",
+    "wind_gusts_10m"
+  ],
+  "timestamp_min": "2025-01-01 00:00:00",
+  "timestamp_max": "2025-12-31 23:00:00",
+  "duplicate_timestamp_count": 0,
+  "missing_expected_hours": 0,
+  "unexpected_timestamps": 0,
+  "monthly_schema_problems": [],
+  "definitely_invalid": {
+    "MISSING_OR_UNPARSEABLE_TIMESTAMP": 0,
+    "DUPLICATE_TIMESTAMP": 0,
+    "MISSING_EXPECTED_HOUR": 0,
+    "UNEXPECTED_TIMESTAMP": 0
+  },
+  "candidate_anomalies": {
+    "TEMPERATURE_OUTSIDE_PLAUSIBLE_NYC_RANGE": 0,
+    "HUMIDITY_OUTSIDE_0_100": 0,
+    "NEGATIVE_PRECIPITATION": 0,
+    "NEGATIVE_RAIN": 0,
+    "NEGATIVE_SNOWFALL": 0,
+    "NEGATIVE_WIND_SPEED": 0,
+    "NEGATIVE_WIND_GUST": 0
+  },
+  "status": "SUCCESS"
+}

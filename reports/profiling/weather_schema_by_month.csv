@@ -1,0 +1,13 @@
+month,file_name,hourly_key_count,hourly_keys,matches_expected_hourly_keys,array_length_count,array_lengths,row_count
+2025-01,weather_nyc_2025_01.json,10,time|temperature_2m|relative_humidity_2m|apparent_temperature|precipitation|rain|snowfall|weather_code|wind_speed_10m|wind_gusts_10m,True,1,744,744
+2025-02,weather_nyc_2025_02.json,10,time|temperature_2m|relative_humidity_2m|apparent_temperature|precipitation|rain|snowfall|weather_code|wind_speed_10m|wind_gusts_10m,True,1,672,672
+2025-03,weather_nyc_2025_03.json,10,time|temperature_2m|relative_humidity_2m|apparent_temperature|precipitation|rain|snowfall|weather_code|wind_speed_10m|wind_gusts_10m,True,1,744,744
+2025-04,weather_nyc_2025_04.json,10,time|temperature_2m|relative_humidity_2m|apparent_temperature|precipitation|rain|snowfall|weather_code|wind_speed_10m|wind_gusts_10m,True,1,720,720
+2025-05,weather_nyc_2025_05.json,10,time|temperature_2m|relative_humidity_2m|apparent_temperature|precipitation|rain|snowfall|weather_code|wind_speed_10m|wind_gusts_10m,True,1,744,744
+2025-06,weather_nyc_2025_06.json,10,time|temperature_2m|relative_humidity_2m|apparent_temperature|precipitation|rain|snowfall|weather_code|wind_speed_10m|wind_gusts_10m,True,1,720,720
+2025-07,weather_nyc_2025_07.json,10,time|temperature_2m|relative_humidity_2m|apparent_temperature|precipitation|rain|snowfall|weather_code|wind_speed_10m|wind_gusts_10m,True,1,744,744
+2025-08,weather_nyc_2025_08.json,10,time|temperature_2m|relative_humidity_2m|apparent_temperature|precipitation|rain|snowfall|weather_code|wind_speed_10m|wind_gusts_10m,True,1,744,744
+2025-09,weather_nyc_2025_09.json,10,time|temperature_2m|relative_humidity_2m|apparent_temperature|precipitation|rain|snowfall|weather_code|wind_speed_10m|wind_gusts_10m,True,1,720,720
+2025-10,weather_nyc_2025_10.json,10,time|temperature_2m|relative_humidity_2m|apparent_temperature|precipitation|rain|snowfall|weather_code|wind_speed_10m|wind_gusts_10m,True,1,744,744
+2025-11,weather_nyc_2025_11.json,10,time|temperature_2m|relative_humidity_2m|apparent_temperature|precipitation|rain|snowfall|weather_code|wind_speed_10m|wind_gusts_10m,True,1,720,720
+2025-12,weather_nyc_2025_12.json,10,time|temperature_2m|relative_humidity_2m|apparent_temperature|precipitation|rain|snowfall|weather_code|wind_speed_10m|wind_gusts_10m,True,1,744,744

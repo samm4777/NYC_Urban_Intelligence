@@ -1,0 +1,14 @@
+column_name,value,count
+Borough,Queens,69
+Borough,Manhattan,69
+Borough,Brooklyn,61
+Borough,Bronx,43
+Borough,Staten Island,20
+Borough,EWR,1
+Borough,Unknown,1
+Borough,N/A,1
+service_zone,Boro Zone,205
+service_zone,Yellow Zone,55
+service_zone,Airports,2
+service_zone,N/A,2
+service_zone,EWR,1

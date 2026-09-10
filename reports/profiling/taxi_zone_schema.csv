@@ -1,0 +1,5 @@
+column_name,data_type,missing_count,distinct_count
+LocationID,int64,0,265
+Borough,object,0,8
+Zone,object,0,262
+service_zone,object,0,5

@@ -1,0 +1,11 @@
+classification,check_name,description,record_count
+CANDIDATE_ANOMALY,FARE_GE_900,Fare amount is at least 900; investigate before defining a rule.,145
+CANDIDATE_ANOMALY,NEGATIVE_FARE,Fare amount is negative; may include adjustments/refunds and requires investigation.,2848620
+CANDIDATE_ANOMALY,NEGATIVE_TOTAL_AMOUNT,Total amount is negative; requires investigation.,973721
+CANDIDATE_ANOMALY,DISTANCE_GE_150,Trip distance is at least 150 miles; investigate before defining a rule.,2348
+CANDIDATE_ANOMALY,NEGATIVE_TRIP_DISTANCE,Trip distance is negative; requires investigation.,0
+CANDIDATE_ANOMALY,DURATION_GE_10_HOURS,Trip duration is at least 10 hours; investigate before defining a rule.,12989
+CANDIDATE_ANOMALY,MISSING_PICKUP_LOCATION,Pickup location ID is missing.,0
+CANDIDATE_ANOMALY,MISSING_DROPOFF_LOCATION,Drop-off location ID is missing.,0
+CANDIDATE_ANOMALY,PASSENGER_COUNT_LE_0,Passenger count is zero/negative; may represent unknown values and requires investigation.,260062
+CANDIDATE_ANOMALY,PASSENGER_COUNT_GT_6,Passenger count exceeds 6; requires investigation.,146

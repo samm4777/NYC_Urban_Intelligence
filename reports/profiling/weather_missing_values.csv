@@ -1,0 +1,11 @@
+column_name,missing_count,missing_percent
+time,0,0.0
+temperature_2m,0,0.0
+relative_humidity_2m,0,0.0
+apparent_temperature,0,0.0
+precipitation,0,0.0
+rain,0,0.0
+snowfall,0,0.0
+weather_code,0,0.0
+wind_speed_10m,0,0.0
+wind_gusts_10m,0,0.0

@@ -1,0 +1,4 @@
+classification,check_name,description,record_count
+DEFINITELY_INVALID,MISSING_LOCATION_ID,Taxi Zone lookup row is missing LocationID.,0
+DEFINITELY_INVALID,DUPLICATE_LOCATION_ID_ROWS,Rows participate in a duplicate LocationID.,0
+DEFINITELY_INVALID,MISSING_ZONE_NAME,Taxi Zone lookup row is missing Zone name.,0

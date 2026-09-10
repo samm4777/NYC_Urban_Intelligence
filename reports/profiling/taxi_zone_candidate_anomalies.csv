@@ -1,0 +1,4 @@
+classification,check_name,description,record_count
+CANDIDATE_ANOMALY,MISSING_BOROUGH,Borough is missing; assess whether this is an intentional reference value.,0
+CANDIDATE_ANOMALY,MISSING_SERVICE_ZONE,service_zone is missing; assess whether this is expected for special zones.,0
+CANDIDATE_ANOMALY,PLACEHOLDER_BOROUGH_OR_ZONE,Borough or Zone contains a placeholder such as Unknown or N/A.,2

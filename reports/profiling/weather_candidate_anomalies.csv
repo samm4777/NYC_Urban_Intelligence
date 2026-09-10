@@ -1,0 +1,8 @@
+classification,check_name,description,record_count
+CANDIDATE_ANOMALY,TEMPERATURE_OUTSIDE_PLAUSIBLE_NYC_RANGE,Temperature is below -30 C or above 50 C; investigate before rule definition.,0
+CANDIDATE_ANOMALY,HUMIDITY_OUTSIDE_0_100,Relative humidity is outside 0-100 percent.,0
+CANDIDATE_ANOMALY,NEGATIVE_PRECIPITATION,Precipitation is negative.,0
+CANDIDATE_ANOMALY,NEGATIVE_RAIN,Rain is negative.,0
+CANDIDATE_ANOMALY,NEGATIVE_SNOWFALL,Snowfall is negative.,0
+CANDIDATE_ANOMALY,NEGATIVE_WIND_SPEED,Wind speed is negative.,0
+CANDIDATE_ANOMALY,NEGATIVE_WIND_GUST,Wind gust is negative.,0

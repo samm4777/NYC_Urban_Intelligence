@@ -1,0 +1,13 @@
+month,file_name,row_count,column_count
+2025-01,yellow_tripdata_2025-01.parquet,3475226,20
+2025-02,yellow_tripdata_2025-02.parquet,3577543,20
+2025-03,yellow_tripdata_2025-03.parquet,4145257,20
+2025-04,yellow_tripdata_2025-04.parquet,3970553,20
+2025-05,yellow_tripdata_2025-05.parquet,4591845,20
+2025-06,yellow_tripdata_2025-06.parquet,4322960,20
+2025-07,yellow_tripdata_2025-07.parquet,3898963,20
+2025-08,yellow_tripdata_2025-08.parquet,3574091,20
+2025-09,yellow_tripdata_2025-09.parquet,4251015,20
+2025-10,yellow_tripdata_2025-10.parquet,4428699,20
+2025-11,yellow_tripdata_2025-11.parquet,4181444,20
+2025-12,yellow_tripdata_2025-12.parquet,4305006,20

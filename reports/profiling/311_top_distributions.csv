@@ -1,0 +1,54 @@
+column_name,value,count
+status,Closed,3600738
+status,In Progress,39007
+status,Open,6123
+status,Pending,4320
+status,Assigned,3497
+status,Started,1184
+status,Unspecified,171
+borough,BROOKLYN,1078334
+borough,QUEENS,878212
+borough,BRONX,836527
+borough,MANHATTAN,725059
+borough,STATEN ISLAND,134301
+borough,Unspecified,2607
+agency,NYPD,1717594
+agency,HPD,774535
+agency,DSNY,326780
+agency,DOT,212103
+agency,DEP,197143
+agency,DPR,110855
+agency,DOB,103066
+agency,DOHMH,83396
+agency,DHS,51449
+agency,TLC,36225
+agency,EDC,20554
+agency,DCWP,18278
+agency,DOE,1737
+agency,OOS,1111
+agency,OTI,214
+complaint_type,Illegal Parking,577257
+complaint_type,Noise - Residential,463349
+complaint_type,HEAT/HOT WATER,315946
+complaint_type,Noise - Street/Sidewalk,173049
+complaint_type,Blocked Driveway,172723
+complaint_type,UNSANITARY CONDITION,117749
+complaint_type,Water System,77491
+complaint_type,Street Condition,70330
+complaint_type,PLUMBING,69548
+complaint_type,Abandoned Vehicle,67903
+complaint_type,Noise - Commercial,63958
+complaint_type,Dirty Condition,61047
+complaint_type,PAINT/PLASTER,59242
+complaint_type,Noise,55721
+complaint_type,Encampment,47998
+complaint_type,Traffic Signal Condition,47998
+complaint_type,DOOR/WINDOW,45463
+complaint_type,Derelict Vehicles,43229
+complaint_type,Noise - Vehicle,43223
+complaint_type,Missed Collection,42977
+open_data_channel_type,ONLINE,1564744
+open_data_channel_type,PHONE,970072
+open_data_channel_type,MOBILE,856056
+open_data_channel_type,UNKNOWN,264130
+open_data_channel_type,OTHER,38

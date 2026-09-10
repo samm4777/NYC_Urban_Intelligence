@@ -1,0 +1,34 @@
+{
+  "run_id": "742e5110-4f24-4517-b3aa-ebbe2c1ae32f",
+  "source": "tlc_taxi_zones",
+  "profile_year": 2025,
+  "started_at": "2026-09-10T12:07:31.182254+00:00",
+  "finished_at": "2026-09-10T12:07:31.562841+00:00",
+  "lookup_row_count": 265,
+  "expected_lookup_row_count": 265,
+  "row_count_match": true,
+  "column_count": 4,
+  "columns": [
+    "LocationID",
+    "Borough",
+    "Zone",
+    "service_zone"
+  ],
+  "expected_schema_match": true,
+  "location_id_min": 1.0,
+  "location_id_max": 265.0,
+  "distinct_location_ids": 265,
+  "duplicate_location_id_rows": 0,
+  "missing_geographic_files": [],
+  "definitely_invalid": {
+    "MISSING_LOCATION_ID": 0,
+    "DUPLICATE_LOCATION_ID_ROWS": 0,
+    "MISSING_ZONE_NAME": 0
+  },
+  "candidate_anomalies": {
+    "MISSING_BOROUGH": 0,
+    "MISSING_SERVICE_ZONE": 0,
+    "PLACEHOLDER_BOROUGH_OR_ZONE": 2
+  },
+  "status": "SUCCESS"
+}

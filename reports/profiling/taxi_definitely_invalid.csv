@@ -1,0 +1,5 @@
+classification,check_name,description,record_count
+DEFINITELY_INVALID,MISSING_PICKUP_TIMESTAMP,Pickup timestamp is null.,0
+DEFINITELY_INVALID,MISSING_DROPOFF_TIMESTAMP,Drop-off timestamp is null.,0
+DEFINITELY_INVALID,DROPOFF_BEFORE_PICKUP,Drop-off timestamp occurs before pickup.,2235
+DEFINITELY_INVALID,PICKUP_OUTSIDE_2025,Pickup timestamp is outside intended 2025 period.,29

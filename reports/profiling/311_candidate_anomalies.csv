@@ -1,0 +1,5 @@
+classification,check_name,description,record_count
+CANDIDATE_ANOMALY,MISSING_COORDINATES,Latitude or longitude is missing; assess impact on spatial enrichment.,50148
+CANDIDATE_ANOMALY,RESOLUTION_OVER_365_DAYS,Closed complaint has resolution duration greater than 365 days.,5022
+CANDIDATE_ANOMALY,MISSING_OR_UNEXPECTED_BOROUGH,Borough is missing or outside the expected NYC/Unspecified set.,0
+CANDIDATE_ANOMALY,DUPLICATE_UNIQUE_KEY_ROWS,Repeated 311 unique_key values require investigation before deduplication.,0

@@ -1,0 +1,6 @@
+file_name,exists,file_size_bytes
+taxi_zones.shp,True,1586264
+taxi_zones.shx,True,2204
+taxi_zones.dbf,True,59927
+taxi_zones.prj,True,565
+taxi_zones.cpg,True,5

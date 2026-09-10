@@ -1,0 +1,6 @@
+classification,check_name,description,record_count
+DEFINITELY_INVALID,MISSING_OR_UNPARSEABLE_CREATED_DATE,created_date is missing or cannot be parsed.,0
+DEFINITELY_INVALID,CREATED_DATE_OUTSIDE_2025,created_date falls outside the intended 2025 period.,0
+DEFINITELY_INVALID,CLOSED_BEFORE_CREATED,closed_date occurs before created_date.,914
+DEFINITELY_INVALID,INVALID_LATITUDE_RANGE,"Latitude is outside the structural range [-90, 90].",0
+DEFINITELY_INVALID,INVALID_LONGITUDE_RANGE,"Longitude is outside the structural range [-180, 180].",0
