@@ -1,0 +1,2 @@
+run_id,source,year,month,file_name,source_url,download_timestamp_utc,file_size_bytes,row_count,status,error_message
+295544b5-be1c-4b48-8281-7ee6aa1c018f,yellow_taxi,2025,01,yellow_tripdata_2025-01.parquet,https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2025-01.parquet,2026-09-10T06:17:42.171171+00:00,59158238,3475226,SUCCESS,

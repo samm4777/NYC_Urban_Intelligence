@@ -82,6 +82,9 @@ data/quarantine/**
 # Common data formats
 *.parquet
 *.csv
+# Keep small project evidence/report CSV files
+!reports/acquisition/*.csv
+!reports/reconciliation/*.csv
 *.json
 *.geojson
 *.shp
