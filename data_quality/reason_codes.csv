@@ -1,0 +1,25 @@
+rule_id,reason_code,source,reason_description,severity,action,record_level
+DQ_TAXI_001,MISSING_PICKUP_TIMESTAMP,yellow_taxi,Pickup timestamp is missing.,Critical,Quarantine,true
+DQ_TAXI_002,MISSING_DROPOFF_TIMESTAMP,yellow_taxi,Drop-off timestamp is missing.,Critical,Quarantine,true
+DQ_TAXI_003,INVALID_TRIP_DURATION,yellow_taxi,Drop-off timestamp occurs before pickup timestamp.,Critical,Quarantine,true
+DQ_TAXI_004,INVALID_PICKUP_DATE,yellow_taxi,Pickup timestamp is outside calendar year 2025.,Critical,Quarantine,true
+DQ_TAXI_005,MISSING_TAXI_LOCATION,yellow_taxi,Pickup or drop-off Taxi Zone LocationID is missing.,High,Quarantine,true
+DQ_TAXI_006,DUPLICATE_TAXI_RECORD,yellow_taxi,Exact duplicate Taxi source record beyond the first occurrence.,High,Quarantine,true
+DQ_TAXI_007,NEGATIVE_TRIP_DISTANCE,yellow_taxi,Trip distance is negative.,Critical,Quarantine,true
+DQ_TAXI_014,TAXI_SCHEMA_MISMATCH,yellow_taxi,Required Taxi schema is missing or incompatible.,Critical,Fail Run,false
+DQ_311_001,MISSING_OR_INVALID_311_CREATED_DATE,nyc_311,311 created_date is missing or unparseable.,Critical,Quarantine,true
+DQ_311_002,INVALID_311_CREATED_DATE,nyc_311,311 created_date is outside calendar year 2025.,Critical,Quarantine,true
+DQ_311_003,INVALID_311_DURATION,nyc_311,311 closed_date occurs before created_date.,Critical,Quarantine,true
+DQ_311_004,DUPLICATE_311_RECORD,nyc_311,Duplicate 311 unique_key occurrence beyond the first.,High,Quarantine,true
+DQ_311_005,MISSING_311_COORDINATES,nyc_311,Latitude or longitude is missing for spatial enrichment.,High,Quarantine,true
+DQ_311_006,INVALID_311_COORDINATES,nyc_311,Latitude or longitude is outside global structural ranges.,Critical,Quarantine,true
+DQ_311_008,311_SCHEMA_MISMATCH,nyc_311,Required 311 schema is missing or incompatible.,Critical,Fail Run,false
+DQ_WEATHER_001,WEATHER_GAP,open_meteo_weather,One or more expected 2025 hourly timestamps are missing.,Critical,Fail Run,false
+DQ_WEATHER_002,DUPLICATE_WEATHER_TIMESTAMP,open_meteo_weather,Weather timestamp occurs more than once.,Critical,Quarantine and Fail Run,true
+DQ_WEATHER_003,INVALID_WEATHER_MEASUREMENT,open_meteo_weather,Weather measurement violates a physical range rule.,High,Quarantine,true
+DQ_WEATHER_004,INVALID_WEATHER_DATE,open_meteo_weather,Weather timestamp is outside the expected 2025 hourly grid.,Critical,Quarantine,true
+DQ_WEATHER_005,WEATHER_SCHEMA_MISMATCH,open_meteo_weather,Required Weather hourly schema is missing or arrays are inconsistent.,Critical,Fail Run,false
+DQ_ZONE_001,MISSING_ZONE_ID,tlc_taxi_zones,Taxi Zone LocationID is missing.,Critical,Fail Run,false
+DQ_ZONE_002,DUPLICATE_ZONE_ID,tlc_taxi_zones,Taxi Zone LocationID is duplicated.,Critical,Fail Run,false
+DQ_ZONE_003,MISSING_ZONE_NAME,tlc_taxi_zones,Taxi Zone name is truly empty after preserving literal N/A values.,High,Fail Run,false
+DQ_ZONE_005,ZONE_SCHEMA_MISMATCH,tlc_taxi_zones,Taxi Zone lookup schema differs from the expected four columns.,Critical,Fail Run,false

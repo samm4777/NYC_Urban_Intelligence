@@ -119,3 +119,6 @@ dist/
 
 # Allow version-controlled Data Quality rule catalog
 !data_quality/dq_rules.csv
+
+# Allow version-controlled Phase 8 reason-code dictionary
+!data_quality/reason_codes.csv
