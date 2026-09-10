@@ -432,7 +432,17 @@ def download_month(month):
 
             response.raise_for_status()
 
-            records = response.json()
+            # Preserve the response payload exactly as returned by the API.
+            # We still parse the JSON in memory only to validate the payload
+            # and count records; the parsed object is never written to Raw.
+            raw_bytes = response.content
+
+            try:
+                records = response.json()
+            except ValueError as exc:
+                raise ValueError(
+                    "NYC 311 API returned invalid JSON."
+                ) from exc
 
             if not isinstance(records, list):
 
@@ -456,20 +466,15 @@ def download_month(month):
                 break
 
             # -------------------------------------------------
-            # Write Raw response safely
+            # Preserve exact Raw API response bytes
             # -------------------------------------------------
 
             with open(
                 temporary_file,
-                "w",
-                encoding="utf-8",
+                "wb",
             ) as file:
 
-                json.dump(
-                    records,
-                    file,
-                    ensure_ascii=False,
-                )
+                file.write(raw_bytes)
 
             # Only make it a real Raw page after
             # the write completes successfully.

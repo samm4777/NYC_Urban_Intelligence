@@ -2,7 +2,7 @@ import argparse
 import csv
 import json
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import requests
@@ -36,9 +36,7 @@ LATITUDE = 40.7128
 LONGITUDE = -74.0060
 TIMEZONE = "America/New_York"
 
-BASE_URL = (
-    "https://archive-api.open-meteo.com/v1/archive"
-)
+BASE_URL = "https://archive-api.open-meteo.com/v1/archive"
 
 HOURLY_VARIABLES = [
     "temperature_2m",
@@ -98,6 +96,7 @@ def create_session():
             504,
         ],
         allowed_methods=["GET"],
+        raise_on_status=False,
     )
 
     adapter = HTTPAdapter(
@@ -109,11 +108,16 @@ def create_session():
         adapter,
     )
 
+    session.mount(
+        "http://",
+        adapter,
+    )
+
     return session
 
 
 # ---------------------------------------------------------
-# Month helpers
+# Date helpers
 # ---------------------------------------------------------
 
 def month_range(year, month):
@@ -126,24 +130,19 @@ def month_range(year, month):
     )
 
     if month == 12:
-
         end = datetime(
             year,
             12,
             31,
             tzinfo=timezone.utc,
         )
-
     else:
-
         next_month = datetime(
             year,
             month + 1,
             1,
             tzinfo=timezone.utc,
         )
-
-        from datetime import timedelta
 
         end = next_month - timedelta(days=1)
 
@@ -159,7 +158,7 @@ def month_range(year, month):
 
 def write_manifest(record):
 
-    exists = MANIFEST_FILE.exists()
+    file_exists = MANIFEST_FILE.exists()
 
     fields = [
         "run_id",
@@ -192,14 +191,14 @@ def write_manifest(record):
             fieldnames=fields,
         )
 
-        if not exists:
+        if not file_exists:
             writer.writeheader()
 
         writer.writerow(record)
 
 
 # ---------------------------------------------------------
-# Validate existing Raw file
+# Validate existing Raw weather file
 # ---------------------------------------------------------
 
 def validate_existing_file(file_path):
@@ -208,37 +207,66 @@ def validate_existing_file(file_path):
 
         with open(
             file_path,
-            "r",
-            encoding="utf-8",
+            "rb",
         ) as file:
+            raw_bytes = file.read()
 
-            payload = json.load(file)
+        payload = json.loads(
+            raw_bytes.decode("utf-8")
+        )
 
         hourly = payload.get("hourly")
 
         if not hourly:
             raise ValueError(
-                "Missing hourly section"
+                "Missing hourly section."
             )
 
         times = hourly.get("time")
 
         if not isinstance(times, list):
             raise ValueError(
-                "Missing hourly time array"
+                "Missing hourly time array."
             )
 
-        return len(times)
+        row_count = len(times)
+
+        if row_count == 0:
+            raise ValueError(
+                "Hourly time array is empty."
+            )
+
+        for variable in HOURLY_VARIABLES:
+
+            values = hourly.get(variable)
+
+            if not isinstance(values, list):
+                raise ValueError(
+                    f"Missing hourly variable: {variable}"
+                )
+
+            if len(values) != row_count:
+                raise ValueError(
+                    f"Hourly array length mismatch for {variable}"
+                )
+
+        return row_count
 
     except (
         json.JSONDecodeError,
+        UnicodeDecodeError,
         ValueError,
         TypeError,
     ):
 
         print(
-            f"Invalid existing weather file: "
+            f"Existing weather file is invalid: "
             f"{file_path.name}"
+        )
+
+        print(
+            "Removing invalid file so it can "
+            "be downloaded again."
         )
 
         file_path.unlink()
@@ -247,7 +275,7 @@ def validate_existing_file(file_path):
 
 
 # ---------------------------------------------------------
-# Download month
+# Download one month
 # ---------------------------------------------------------
 
 def download_month(month):
@@ -324,7 +352,7 @@ def download_month(month):
                 finished_at = utc_now()
 
                 print(
-                    f"Raw weather file already exists."
+                    "Raw weather file already exists."
                 )
 
                 print(
@@ -379,16 +407,26 @@ def download_month(month):
 
             response.raise_for_status()
 
-            payload = response.json()
+            # Exact HTTP response body bytes.
+            raw_bytes = response.content
+
+            try:
+                payload = response.json()
+            except ValueError as exc:
+                raise ValueError(
+                    "Open-Meteo returned invalid JSON."
+                ) from exc
 
         finally:
-
             session.close()
+
+        # -------------------------------------------------
+        # Validate API payload
+        # -------------------------------------------------
 
         hourly = payload.get("hourly")
 
         if not hourly:
-
             raise ValueError(
                 "Open-Meteo response contains "
                 "no hourly section."
@@ -397,7 +435,6 @@ def download_month(month):
         times = hourly.get("time")
 
         if not isinstance(times, list):
-
             raise ValueError(
                 "Open-Meteo response contains "
                 "no valid hourly time array."
@@ -406,48 +443,36 @@ def download_month(month):
         row_count = len(times)
 
         if row_count == 0:
-
             raise ValueError(
                 "Weather API returned zero rows."
             )
-
-        # -------------------------------------------------
-        # Validate hourly arrays
-        # -------------------------------------------------
 
         for variable in HOURLY_VARIABLES:
 
             values = hourly.get(variable)
 
             if not isinstance(values, list):
-
                 raise ValueError(
                     f"Missing hourly variable: "
                     f"{variable}"
                 )
 
             if len(values) != row_count:
-
                 raise ValueError(
                     f"Hourly array length mismatch "
                     f"for {variable}"
                 )
 
         # -------------------------------------------------
-        # Save Raw API response
+        # Preserve exact Raw HTTP response bytes
         # -------------------------------------------------
 
         with open(
             temporary_file,
-            "w",
-            encoding="utf-8",
+            "wb",
         ) as file:
 
-            json.dump(
-                payload,
-                file,
-                ensure_ascii=False,
-            )
+            file.write(raw_bytes)
 
         temporary_file.replace(
             destination_file
@@ -482,9 +507,7 @@ def download_month(month):
                 "file_name": file_name,
                 "file_size_bytes": file_size,
                 "row_count": row_count,
-                "retrieval_timestamp_utc": (
-                    finished_at
-                ),
+                "retrieval_timestamp_utc": finished_at,
                 "status": "SUCCESS",
                 "error_message": "",
             }
@@ -510,7 +533,7 @@ def download_month(month):
         )
 
         print(
-            f"Download complete."
+            "Download complete."
         )
 
         print(
@@ -549,9 +572,7 @@ def download_month(month):
                 "file_name": file_name,
                 "file_size_bytes": 0,
                 "row_count": 0,
-                "retrieval_timestamp_utc": (
-                    finished_at
-                ),
+                "retrieval_timestamp_utc": finished_at,
                 "status": "FAILED",
                 "error_message": str(exc),
             }
@@ -610,7 +631,6 @@ def main():
     for month in args.months:
 
         if month < 1 or month > 12:
-
             raise ValueError(
                 f"Invalid month: {month}"
             )
