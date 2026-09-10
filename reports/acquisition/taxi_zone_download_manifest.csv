@@ -1,0 +1,3 @@
+run_id,source,file_name,source_url,download_timestamp_utc,file_size_bytes,status,error_message
+7c8f6cd5-d1f4-4804-af28-de2773689be9,taxi_zones,taxi_zone_lookup.csv,https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv,2026-09-10T06:32:50.374289+00:00,12331,SUCCESS,
+e21277d3-c5e3-4614-b4db-37854daa8862,taxi_zones,taxi_zones.zip,https://d37ci6vzurychx.cloudfront.net/misc/taxi_zones.zip,2026-09-10T06:32:55.427794+00:00,1022574,SUCCESS,
