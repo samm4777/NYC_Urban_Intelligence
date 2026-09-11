@@ -1,0 +1,64 @@
+{
+  "phase": 13,
+  "status": "SUCCESS",
+  "gold_table": "zone_hourly",
+  "year": 2025,
+  "grain": "one NYC local calendar date + hour + authoritative TLC Taxi Zone polygon",
+  "join_keys": [
+    "date",
+    "hour",
+    "taxi_zone_id"
+  ],
+  "zone_domain": {
+    "authoritative_location_ids": "1-263",
+    "zone_count": 263,
+    "taxi_location_id_264": "Unknown - excluded from spatial Gold",
+    "taxi_location_id_265": "Outside of NYC - excluded from spatial Gold",
+    "taxi_special_264_rows": 80872,
+    "taxi_special_265_rows": 22170,
+    "taxi_special_rows_total": 103042,
+    "taxi_special_revenue_excluded_from_spatial_gold": 4634564.15
+  },
+  "aggregation_rules": {
+    "taxi_trips": "COUNT(*) of Taxi Silver rows by pickup date/hour/PULocationID",
+    "taxi_revenue": "SUM(total_amount)",
+    "average_fare": "AVG(fare_amount); NULL when taxi_trips = 0",
+    "average_trip_distance": "AVG(trip_distance); NULL when taxi_trips = 0",
+    "complaints_311": "COUNT(*) of spatially mapped 311 complaints by created date/hour/taxi_zone_location_id",
+    "temperature_c": "hourly Weather Silver observation repeated across all authoritative Taxi Zones",
+    "rain_mm": "hourly Weather Silver observation repeated across all authoritative Taxi Zones",
+    "snowfall_cm": "hourly Weather Silver observation repeated across all authoritative Taxi Zones",
+    "weather_condition": "hourly Weather Silver WMO-derived condition repeated across all authoritative Taxi Zones"
+  },
+  "revenue_definition": "Taxi revenue is SUM(total_amount) for Taxi Silver trips whose pickup LocationID is an authoritative polygon ID 1-263.",
+  "taxi_reconciliation": {
+    "taxi_silver_rows": 48720337,
+    "authoritative_zone_rows": 48617295,
+    "special_264_265_rows_excluded": 103042,
+    "gold_taxi_trip_count": 48617295,
+    "cross_partition_rows_routed_by_pickup_date": 185,
+    "temporal_assignment_rule": "Gold month is determined by pickup_date, not physical Taxi Silver partition.",
+    "status": "PASS"
+  },
+  "complaint_reconciliation": {
+    "mapped_silver_input_rows": 3604061,
+    "spatially_mapped_rows": 3603396,
+    "outside_polygon_rows_excluded_from_zone_gold": 665,
+    "gold_complaint_count": 3603396,
+    "status": "PASS"
+  },
+  "weather_reconciliation": {
+    "hourly_weather_rows": 8760,
+    "expected_hourly_weather_rows": 8760,
+    "missing_weather_hours": 0,
+    "status": "PASS"
+  },
+  "gold_reconciliation": {
+    "hours": 8760,
+    "zones": 263,
+    "expected_rows": 2303880,
+    "physical_rows": 2303880,
+    "months_found": 12,
+    "row_preservation": "PASS"
+  }
+}
