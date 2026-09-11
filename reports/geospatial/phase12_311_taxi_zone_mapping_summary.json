@@ -1,0 +1,40 @@
+{
+  "phase": 12,
+  "status": "SUCCESS",
+  "mapping_method": "311 longitude/latitude -> EPSG:4326 point geometry -> reproject to EPSG:2263 -> point-in-polygon predicate=within -> TLC Taxi Zone LocationID",
+  "borough_used_for_assignment": false,
+  "nearest_polygon_fallback_used": false,
+  "source_level_metrics": {
+    "total_311_records": 3655040,
+    "unmapped_missing_coordinates": 50148,
+    "closed_before_created_events": 914,
+    "overlap_missing_coordinates_and_invalid_duration": 83,
+    "other_dq_exclusions_duration_only": 831,
+    "total_distinct_dq_rejected": 50979,
+    "valid_311_silver_mapping_base": 3604061
+  },
+  "spatial_mapping_metrics": {
+    "successfully_mapped": 3603396,
+    "unmapped_outside_taxi_polygons": 665,
+    "mapping_success_pct_of_valid_silver": 99.981549,
+    "mapped_pct_of_total_raw_311": 98.587047
+  },
+  "physical_reconciliation": {
+    "months_found": 12,
+    "physical_output_rows": 3604061,
+    "expected_output_rows": 3604061,
+    "row_preservation": "PASS"
+  },
+  "taxi_zone_contract": {
+    "polygon_count": 263,
+    "polygon_location_id_min": 1,
+    "polygon_location_id_max": 263,
+    "special_non_polygon_ids": [
+      264,
+      265
+    ],
+    "point_crs": "EPSG:4326",
+    "polygon_crs": "EPSG:2263",
+    "spatial_predicate": "within"
+  }
+}
