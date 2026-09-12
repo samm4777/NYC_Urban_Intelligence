@@ -1,9 +1,0 @@
-pandas<3.0
-pyspark
-scikit-learn
-requests
-python-dotenv
-pyodbc
-SQLAlchemy
-pytest
-pyarrow
