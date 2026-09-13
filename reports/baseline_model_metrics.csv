@@ -1,0 +1,2 @@
+model,prediction_rule,test_start,test_end,test_rows,mae,rmse,r2
+weekly_naive_baseline,lag_168h,2025-11-01,2025-12-31 23:00:00,385032,6.770746327577967,22.920053686189064,0.8625944610767888
