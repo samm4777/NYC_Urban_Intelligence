@@ -1,6 +1,7 @@
 import argparse
 import csv
 import json
+import os
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -334,6 +335,30 @@ def download_month(month):
     print("=" * 70)
 
     try:
+
+        # -------------------------------------------------
+        # Phase 20 controlled failure injection
+        # -------------------------------------------------
+
+        failpoint = os.getenv("NYC_PHASE20_FAILPOINT")
+
+        if failpoint == "weather_api_unavailable":
+            raise requests.ConnectionError(
+                "PHASE20_TEST_FAILURE: "
+                "simulated Weather API unavailable"
+            )
+
+        if failpoint == "weather_invalid_schema":
+            raise ValueError(
+                "PHASE20_TEST_FAILURE: "
+                "simulated invalid Weather API schema"
+            )
+
+        if failpoint == "weather_empty_dataset":
+            raise ValueError(
+                "PHASE20_TEST_FAILURE: "
+                "simulated empty Weather API dataset"
+            )
 
         # -------------------------------------------------
         # Resume support

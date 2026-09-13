@@ -21,6 +21,8 @@ Important exclusions / audit behavior:
 
 from __future__ import annotations
 
+import os
+
 import argparse
 import json
 import shutil
@@ -962,6 +964,15 @@ def build_gold_month(
             f"GOLD_KEY_DUPLICATE_FAILURE 2025-{month:02d}"
         )
 
+    # Phase 20 controlled failure injection.
+    # Deliberately remove one row so the existing row-count
+    # contract proves that incomplete Gold cannot be published.
+    if (
+        os.getenv("NYC_PHASE20_FAILPOINT")
+        == "gold_unexpected_row_count"
+    ):
+        gold = gold.iloc[:-1].copy()
+
     expected_rows = (
         len(expected_month_hours(month)) * EXPECTED_ZONE_COUNT
     )
@@ -1068,34 +1079,124 @@ def write_gold_month(
     month: int,
     run_id: str,
 ) -> tuple[Path, int]:
+    """
+    Safely publish one monthly Gold partition.
+
+    The replacement dataset is first written and verified in a staging
+    directory. The existing published Gold month remains untouched until
+    staging has completed successfully.
+
+    Publication uses a same-parent directory swap with rollback protection.
+    """
+
     output_dir = month_folder(OUTPUT_ROOT, month)
 
-    if output_dir.exists():
-        shutil.rmtree(output_dir)
-    output_dir.mkdir(parents=True, exist_ok=True)
-
-    output_file = (
-        output_dir
-        / f"part-00000-{run_id.replace('-', '')}.parquet"
+    staging_dir = output_dir.with_name(
+        f"{output_dir.name}.staging-{run_id}"
     )
 
-    table = pa.Table.from_pandas(
-        gold,
-        schema=GOLD_SCHEMA,
-        preserve_index=False,
-        safe=True,
+    backup_dir = output_dir.with_name(
+        f"{output_dir.name}.backup-{run_id}"
     )
 
-    pq.write_table(
-        table,
-        output_file,
-        compression="snappy",
+    if staging_dir.exists():
+        shutil.rmtree(staging_dir)
+
+    if backup_dir.exists():
+        shutil.rmtree(backup_dir)
+
+    staging_dir.mkdir(
+        parents=True,
+        exist_ok=False,
     )
 
-    verified_rows = pq.ParquetFile(output_file).metadata.num_rows
+    file_name = (
+        f"part-00000-{run_id.replace('-', '')}.parquet"
+    )
 
-    return output_file, verified_rows
+    staging_file = staging_dir / file_name
 
+    try:
+        table = pa.Table.from_pandas(
+            gold,
+            schema=GOLD_SCHEMA,
+            preserve_index=False,
+            safe=True,
+        )
+
+        pq.write_table(
+            table,
+            staging_file,
+            compression="snappy",
+        )
+
+        verified_rows = (
+            pq.ParquetFile(staging_file)
+            .metadata
+            .num_rows
+        )
+
+        expected_rows = len(gold)
+
+        if verified_rows != expected_rows:
+            raise RuntimeError(
+                "GOLD_STAGING_VERIFY_FAILURE: "
+                f"expected={expected_rows:,}, "
+                f"verified={verified_rows:,}"
+            )
+
+        # Phase 20 controlled failure injection.
+        # Used only for deliberate failure testing.
+        if (
+            os.getenv("NYC_PHASE20_FAILPOINT")
+            == "gold_before_publish"
+        ):
+            raise RuntimeError(
+                "PHASE20_TEST_FAILURE: "
+                "simulated Gold failure before publication"
+            )
+
+        # Existing published Gold is moved aside only after the new
+        # staged dataset has been written and verified.
+        if output_dir.exists():
+            output_dir.rename(backup_dir)
+
+        try:
+            staging_dir.rename(output_dir)
+
+        except Exception:
+            # Roll back the previously published Gold if publication
+            # of the staged replacement fails.
+            if (
+                backup_dir.exists()
+                and not output_dir.exists()
+            ):
+                backup_dir.rename(output_dir)
+
+            raise
+
+        if backup_dir.exists():
+            shutil.rmtree(backup_dir)
+
+        published_file = output_dir / file_name
+
+        return published_file, verified_rows
+
+    except Exception:
+        # A failed build must never leave an incomplete staging dataset
+        # presented as published Gold.
+        if staging_dir.exists():
+            shutil.rmtree(staging_dir)
+
+        # Defensive rollback for any failure occurring after the old
+        # Gold directory was moved aside.
+        if (
+            backup_dir.exists()
+            and not output_dir.exists()
+        ):
+            backup_dir.rename(output_dir)
+
+        raise
 
 def update_reconciliation(new_rows: list[dict]) -> pd.DataFrame:
     RECONCILIATION_REPORT.parent.mkdir(parents=True, exist_ok=True)
