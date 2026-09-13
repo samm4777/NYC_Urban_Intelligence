@@ -1,6 +1,6 @@
 """
 NYC Urban Intelligence Platform
-Phase 19 — Airflow Orchestration
+Phase 19 - Airflow Orchestration
 
 Implemented architecture:
 
@@ -20,6 +20,8 @@ reimplementing transformation logic inside the DAG.
 The DAG defaults to one month only for controlled incremental execution.
 """
 from datetime import timedelta
+import os
+import sys
 from pathlib import Path
 
 import pendulum
@@ -29,11 +31,16 @@ from airflow.providers.standard.operators.bash import BashOperator
 
 
 PROJECT_ROOT = Path(
-    "/mnt/c/Users/shsam/OneDrive/Desktop/"
-    "NYC_Urban_Intelligence/NYC_Urban_Intelligence"
-)
+    os.getenv(
+        "NYC_PROJECT_ROOT",
+        str(Path(__file__).resolve().parents[1]),
+    )
+).resolve()
 
-ETL_PYTHON = "/home/sam/nyc-runtime/.venv/bin/python"
+ETL_PYTHON = os.getenv(
+    "NYC_ETL_PYTHON",
+    sys.executable,
+)
 
 
 def month_shell_setup() -> str:

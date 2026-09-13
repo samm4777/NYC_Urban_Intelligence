@@ -1,27 +1,199 @@
-from pathlib import Path
+x-airflow-common: &airflow-common
+  build:
+    context: ..
+    dockerfile: docker/Dockerfile
+  image: nyc-urban-airflow:phase21
+  environment: &airflow-common-env
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+    AIRFLOW__CORE__DAGS_FOLDER: /opt/airflow/project/dags
+    AIRFLOW__CORE__EXECUTION_API_SERVER_URL: http://airflow-api-server:8080/execution/
+
+    # Shared Airflow 3 API/JWT secrets for local development.
+    AIRFLOW__API_AUTH__JWT_SECRET: ${AIRFLOW_JWT_SECRET:-phase21-local-jwt-secret-change-me}
+    AIRFLOW__API__SECRET_KEY: ${AIRFLOW_API_SECRET_KEY:-phase21-local-api-secret-change-me}
+
+    # Local-development authentication only.
+    AIRFLOW__CORE__SIMPLE_AUTH_MANAGER_ALL_ADMINS: "True"
+
+    NYC_PROJECT_ROOT: /opt/airflow/project
+    NYC_ETL_PYTHON: /opt/airflow/etl-venv/bin/python
+
+  volumes:
+    - ..:/opt/airflow/project
+    - airflow_logs:/opt/airflow/logs
+
+services:
+
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pg_isready -U airflow -d airflow
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  airflow-init:
+    <<: *airflow-common
+    command: db migrate
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: "no"
+
+  airflow-api-server:
+    <<: *airflow-common
+    command: api-server
+    ports:
+      - "${AIRFLOW_HOST_PORT:-8080}:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - --fail
+        - http://localhost:8080/api/v2/monitor/health
+      interval: 10s
+      timeout: 10s
+      retries: 12
+      start_period: 30s
+    restart: unless-stopped
+
+  airflow-scheduler:
+    <<: *airflow-common
+    command: scheduler
+    depends_on:
+      postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+      airflow-api-server:
+        condition: service_healthy
+    restart: unless-stopped
+
+  airflow-dag-processor:
+    <<: *airflow-common
+    command: dag-processor
+    depends_on:
+      postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+    restart: unless-stopped
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+  spark-master:
+    image: nyc-urban-airflow:phase21
+    entrypoint:
+      - /opt/airflow/etl-venv/lib/python3.12/site-packages/pyspark/bin/spark-class
+    command:
+      - org.apache.spark.deploy.master.Master
+      - --host
+      - spark-master
+      - --port
+      - "7077"
+      - --webui-port
+      - "8080"
+    environment:
+      JAVA_HOME: /usr/lib/jvm/java-17-openjdk-amd64
+      NYC_PROJECT_ROOT: /opt/airflow/project
+      NYC_ETL_PYTHON: /opt/airflow/etl-venv/bin/python
+    volumes:
+      - ..:/opt/airflow/project
+    ports:
+      - "${SPARK_MASTER_PORT:-7077}:7077"
+      - "${SPARK_MASTER_UI_PORT:-8082}:8080"
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - bash -c '</dev/tcp/spark-master/7077'
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+    restart: unless-stopped
 
+  spark-worker:
+    image: nyc-urban-airflow:phase21
+    entrypoint:
+      - /opt/airflow/etl-venv/lib/python3.12/site-packages/pyspark/bin/spark-class
+    command:
+      - org.apache.spark.deploy.worker.Worker
+      - spark://spark-master:7077
+      - --webui-port
+      - "8081"
+    environment:
+      JAVA_HOME: /usr/lib/jvm/java-17-openjdk-amd64
+      NYC_PROJECT_ROOT: /opt/airflow/project
+      NYC_ETL_PYTHON: /opt/airflow/etl-venv/bin/python
+      SPARK_WORKER_CORES: "2"
+      SPARK_WORKER_MEMORY: 2g
+    volumes:
+      - ..:/opt/airflow/project
+    ports:
+      - "${SPARK_WORKER_UI_PORT:-8083}:8081"
+    depends_on:
+      spark-master:
+        condition: service_healthy
+    restart: unless-stopped
 
-def test_required_project_directories_exist():
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: Developer
+      MSSQL_SA_PASSWORD: ${MSSQL_SA_PASSWORD}
+    ports:
+      - "${MSSQL_HOST_PORT:-1433}:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - >
+          /opt/mssql-tools18/bin/sqlcmd
+          -S localhost
+          -U sa
+          -P "$MSSQL_SA_PASSWORD"
+          -C
+          -Q "SELECT 1"
+          -b
+          -o /dev/null
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+    restart: unless-stopped
 
-    required_directories = [
-        "airflow",
-        "python",
-        "spark",
-        "sql",
-        "tests",
-        "data_quality",
-        "model",
-        "reports",
-        "documentation",
-        "docker",
-        "config",
-        "data",
-    ]
-
-    for directory in required_directories:
-        assert (PROJECT_ROOT / directory).exists(), (
-            f"Missing required directory: {directory}"
-        )
+  warehouse-init:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      MSSQL_SA_PASSWORD: ${MSSQL_SA_PASSWORD}
+    volumes:
+      - ..:/workspace
+    entrypoint:
+      - /bin/bash
+    command:
+      - /workspace/docker/init_warehouse.sh
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    restart: "no"
+volumes:
+  postgres_data:
+  airflow_logs:
+  sqlserver_data:
