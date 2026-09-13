@@ -122,3 +122,5 @@ dist/
 
 # Allow version-controlled Phase 8 reason-code dictionary
 !data_quality/reason_codes.csv
+
+data/models/
