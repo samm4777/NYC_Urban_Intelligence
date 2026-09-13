@@ -3,6 +3,7 @@
 import argparse
 import calendar
 import getpass
+import os
 import hashlib
 import math
 import sys
@@ -110,9 +111,12 @@ def parse_args():
 
 
 def connect(server: str, database: str, user: str):
-    password = getpass.getpass(
-        f"Azure SQL password for {user}: "
-    )
+    password = os.getenv("NYC_AZURE_SQL_PASSWORD")
+
+    if not password:
+        password = getpass.getpass(
+            f"Azure SQL password for {user}: "
+        )
 
     conn_string = (
         "DRIVER={ODBC Driver 18 for SQL Server};"

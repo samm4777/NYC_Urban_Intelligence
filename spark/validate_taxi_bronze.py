@@ -1,3 +1,4 @@
+import argparse
 from pathlib import Path
 
 from pyspark.sql import SparkSession
@@ -6,38 +7,43 @@ from pyspark.sql.functions import col
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
-BRONZE_MONTH = (
-    PROJECT_ROOT
-    / "data"
-    / "bronze"
-    / "taxi"
-    / "year=2025"
-    / "month=01"
-)
+
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Validate 2025 Yellow Taxi Bronze monthly datasets."
+    )
+    parser.add_argument(
+        "--months",
+        type=int,
+        nargs="+",
+        choices=range(1, 13),
+        default=[1],
+        help="Months to validate. Example: --months 1 2 3",
+    )
+    return parser.parse_args()
 
 
 def spark_uri(path: Path) -> str:
     return "file:///" + path.resolve().as_posix()
 
 
-spark = (
-    SparkSession.builder
-    .appName("Validate-Taxi-Bronze")
-    .master("local[*]")
-    .config("spark.driver.memory", "4g")
-    .getOrCreate()
-)
+def validate_month(spark, month: int):
+    bronze_month = (
+        PROJECT_ROOT
+        / "data"
+        / "bronze"
+        / "taxi"
+        / "year=2025"
+        / f"month={month:02d}"
+    )
 
-spark.sparkContext.setLogLevel("WARN")
-
-try:
     parquet_files = sorted(
-        BRONZE_MONTH.glob("part-*.parquet")
+        bronze_month.glob("part-*.parquet")
     )
 
     if not parquet_files:
         raise FileNotFoundError(
-            f"No Bronze files found in {BRONZE_MONTH}"
+            f"No Bronze files found in {bronze_month}"
         )
 
     paths = [
@@ -48,22 +54,12 @@ try:
     df = spark.read.parquet(*paths)
 
     print("=" * 70)
-    print("JANUARY TAXI BRONZE VALIDATION")
+    print(f"TAXI BRONZE VALIDATION - 2025-{month:02d}")
     print("=" * 70)
-
-    print()
-    print("BRONZE SCHEMA")
-    df.printSchema()
-
-    print()
-    print("COLUMN COUNT")
-    print(len(df.columns))
 
     row_count = df.count()
 
-    print()
-    print("ROW COUNT")
-    print(f"{row_count:,}")
+    print(f"ROW COUNT: {row_count:,}")
 
     required_metadata = [
         "_source",
@@ -80,72 +76,94 @@ try:
         if column not in df.columns
     ]
 
-    print()
-    print("REQUIRED METADATA COLUMNS")
-
     if missing_metadata:
-        print(
-            "MISSING:",
-            ", ".join(missing_metadata),
+        raise RuntimeError(
+            "Missing required metadata columns: "
+            + ", ".join(missing_metadata)
         )
-    else:
-        print("ALL PRESENT")
 
-    print()
-    print("METADATA VALUES")
-
-    df.select(
-        "_source",
-        "_processing_year",
-        "_processing_month",
-    ).distinct().show(
-        truncate=False
-    )
-
-    null_conditions = [
-        col(column).isNull()
-        for column in required_metadata
-    ]
-
-    null_counts = []
+    null_counts = {}
 
     for column in required_metadata:
-        count = df.filter(
-            col(column).isNull()
-        ).count()
-
-        null_counts.append(
-            (column, count)
+        null_counts[column] = (
+            df.filter(col(column).isNull()).count()
         )
 
-    print()
-    print("METADATA NULL COUNTS")
-
-    for column, count in null_counts:
-        print(
-            f"{column}: {count:,}"
+    metadata_values = (
+        df.select(
+            "_source",
+            "_processing_year",
+            "_processing_month",
         )
-
-    valid = (
-        row_count == 3_475_226
-        and not missing_metadata
-        and all(
-            count == 0
-            for _, count in null_counts
-        )
+        .distinct()
+        .collect()
     )
 
-    print()
-    print("=" * 70)
+    expected_metadata = {
+        ("yellow_taxi", 2025, month)
+    }
 
-    if valid:
-        print(
-            "JANUARY TAXI BRONZE VALIDATION SUCCESS"
+    actual_metadata = {
+        (
+            row["_source"],
+            row["_processing_year"],
+            row["_processing_month"],
         )
-    else:
+        for row in metadata_values
+    }
+
+    validation_errors = []
+
+    if row_count <= 0:
+        validation_errors.append(
+            "Bronze dataset contains zero rows."
+        )
+
+    for column, count in null_counts.items():
+        if count != 0:
+            validation_errors.append(
+                f"{column} contains {count:,} null values."
+            )
+
+    if actual_metadata != expected_metadata:
+        validation_errors.append(
+            "Unexpected processing metadata. "
+            f"Expected {expected_metadata}, "
+            f"found {actual_metadata}."
+        )
+
+    if validation_errors:
         raise RuntimeError(
-            "January Bronze validation failed."
+            "\n".join(validation_errors)
         )
 
-finally:
-    spark.stop()
+    print(
+        f"TAXI BRONZE VALIDATION SUCCESS - 2025-{month:02d}"
+    )
+
+
+def main():
+    args = parse_args()
+
+    spark = (
+        SparkSession.builder
+        .appName("Validate-Taxi-Bronze")
+        .master("local[*]")
+        .config("spark.driver.memory", "4g")
+        .getOrCreate()
+    )
+
+    spark.sparkContext.setLogLevel("WARN")
+
+    try:
+        for month in args.months:
+            validate_month(
+                spark,
+                month,
+            )
+    finally:
+        spark.stop()
+
+
+if __name__ == "__main__":
+    main()
