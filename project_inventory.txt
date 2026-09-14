@@ -1,0 +1,387 @@
+
+Type   FullName                                                                                                                                                       Length   LastWriteTime        
+----   --------                                                                                                                                                       ------   -------------        
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\.git                                                                                                              9/11/2026 9:37:07 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\.pytest_cache                                                                                                     9/10/2026 10:46:09 AM
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\.venv                                                                                                             9/10/2026 10:27:10 AM
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\airflow                                                                                                           9/10/2026 9:45:29 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\config                                                                                                            9/10/2026 9:25:55 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data                                                                                                              9/10/2026 9:23:15 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data_quality                                                                                                      9/10/2026 5:25:09 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\docker                                                                                                            9/10/2026 9:44:05 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\documentation                                                                                                     9/10/2026 6:07:56 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\logs                                                                                                              9/10/2026 9:46:10 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\model                                                                                                             9/10/2026 9:23:44 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\python                                                                                                            9/10/2026 4:48:43 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports                                                                                                           9/10/2026 5:31:35 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\spark                                                                                                             9/10/2026 5:27:15 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\sql                                                                                                               9/10/2026 9:23:43 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\tests                                                                                                             9/10/2026 5:26:30 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\.env                                                                                                     83       9/10/2026 9:24:42 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\.env.example                                                                                             83       9/10/2026 9:25:18 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\.gitignore                                                                                               2325     9/10/2026 6:08:57 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\GitHub_Repository_Link.txt                                                                               52       9/10/2026 9:32:24 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\README.md                                                                                                32388    9/10/2026 11:39:09 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\requirements.txt                                                                                         95       9/10/2026 10:48:02 AM
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\.pytest_cache\v                                                                                                   9/10/2026 10:46:09 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\.pytest_cache\.gitignore                                                                                 37       9/10/2026 10:46:09 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\.pytest_cache\CACHEDIR.TAG                                                                               191      9/10/2026 10:46:09 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\.pytest_cache\README.md                                                                                  302      9/10/2026 10:46:09 AM
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\.pytest_cache\v\cache                                                                                             9/10/2026 10:46:09 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\.pytest_cache\v\cache\nodeids                                                                            900      9/10/2026 6:05:30 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\airflow\__pycache__                                                                                               9/10/2026 9:45:29 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\airflow\.gitkeep                                                                                         0        9/10/2026 9:23:41 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\airflow\nyc_urban_intelligence_dag.py                                                                    1545     9/10/2026 9:43:57 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\config\settings.py                                                                                       1378     9/10/2026 9:25:39 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\config\__init__.py                                                                                       0        9/10/2026 9:25:55 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze                                                                                                       9/10/2026 9:41:09 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\gold                                                                                                         9/10/2026 9:41:09 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\quarantine                                                                                                   9/10/2026 5:43:00 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw                                                                                                          9/10/2026 9:41:08 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\silver                                                                                                       9/10/2026 9:41:09 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\complaints_311                                                                                        9/10/2026 9:41:08 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi                                                                                                  9/10/2026 9:41:08 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\weather                                                                                               9/10/2026 9:41:09 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\.gitkeep                                                                                     0        9/10/2026 9:23:46 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\complaints_311\year=2025                                                                              9/10/2026 9:41:08 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\complaints_311\year=2025\month=01                                                                     9/10/2026 9:41:08 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025                                                                                        9/10/2026 4:10:07 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=01                                                                               9/10/2026 3:42:46 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=02                                                                               9/10/2026 3:52:46 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=03                                                                               9/10/2026 3:54:11 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=04                                                                               9/10/2026 3:55:48 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=05                                                                               9/10/2026 3:57:19 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=06                                                                               9/10/2026 3:59:04 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=07                                                                               9/10/2026 4:00:36 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=08                                                                               9/10/2026 4:02:07 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=09                                                                               9/10/2026 4:03:42 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=10                                                                               9/10/2026 4:05:15 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=11                                                                               9/10/2026 4:07:35 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=12                                                                               9/10/2026 4:10:29 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=01\part-00000-c8ffefb410de4b2c9849da0f32d9ea45.parquet                  22225341 9/10/2026 3:44:12 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=01\part-00001-c8ffefb410de4b2c9849da0f32d9ea45.parquet                  21919436 9/10/2026 3:44:13 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=01\part-00002-c8ffefb410de4b2c9849da0f32d9ea45.parquet                  22314011 9/10/2026 3:44:11 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=01\part-00003-c8ffefb410de4b2c9849da0f32d9ea45.parquet                  7271743  9/10/2026 3:43:16 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=02\part-00000-7a6f1c51f4ca47ec81a821f81298859b.parquet                  21791226 9/10/2026 3:53:41 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=02\part-00001-7a6f1c51f4ca47ec81a821f81298859b.parquet                  21873105 9/10/2026 3:53:47 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=02\part-00002-7a6f1c51f4ca47ec81a821f81298859b.parquet                  22259243 9/10/2026 3:53:42 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=02\part-00003-7a6f1c51f4ca47ec81a821f81298859b.parquet                  9364583  9/10/2026 3:53:13 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=03\part-00000-3adf65176fce49e9a30e2be713aca3e2.parquet                  21890883 9/10/2026 3:55:13 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=03\part-00001-3adf65176fce49e9a30e2be713aca3e2.parquet                  21667576 9/10/2026 3:55:16 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=03\part-00002-3adf65176fce49e9a30e2be713aca3e2.parquet                  22045870 9/10/2026 3:55:21 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=03\part-00003-3adf65176fce49e9a30e2be713aca3e2.parquet                  21953603 9/10/2026 3:55:00 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=04\part-00000-17b26798f6104fa3b96f2fcda923c743.parquet                  21644414 9/10/2026 3:56:43 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=04\part-00001-17b26798f6104fa3b96f2fcda923c743.parquet                  21884778 9/10/2026 3:56:56 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=04\part-00002-17b26798f6104fa3b96f2fcda923c743.parquet                  21837576 9/10/2026 3:56:51 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=04\part-00003-17b26798f6104fa3b96f2fcda923c743.parquet                  18568902 9/10/2026 3:56:32 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=05\part-00000-eeac84bd80b342689fe13e6257214cc9.parquet                  21741297 9/10/2026 3:58:17 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=05\part-00001-eeac84bd80b342689fe13e6257214cc9.parquet                  21929338 9/10/2026 3:58:27 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=05\part-00002-eeac84bd80b342689fe13e6257214cc9.parquet                  22097557 9/10/2026 3:58:30 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=05\part-00003-eeac84bd80b342689fe13e6257214cc9.parquet                  31503150 9/10/2026 3:58:40 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=06\part-00000-944b68c2a02d4453bfcee5d6fa35b309.parquet                  22100353 9/10/2026 4:00:14 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=06\part-00001-944b68c2a02d4453bfcee5d6fa35b309.parquet                  22067564 9/10/2026 4:00:05 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=06\part-00002-944b68c2a02d4453bfcee5d6fa35b309.parquet                  22339096 9/10/2026 4:00:01 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=06\part-00003-944b68c2a02d4453bfcee5d6fa35b309.parquet                  25728015 9/10/2026 4:00:13 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=07\part-00000-d2035f7533074b22a954520d2ead5fef.parquet                  22740164 9/10/2026 4:01:41 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=07\part-00001-d2035f7533074b22a954520d2ead5fef.parquet                  22389198 9/10/2026 4:01:34 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=07\part-00002-d2035f7533074b22a954520d2ead5fef.parquet                  22738765 9/10/2026 4:01:29 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=07\part-00003-d2035f7533074b22a954520d2ead5fef.parquet                  16681320 9/10/2026 4:01:18 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=08\part-00000-396a08fe793a487f855fd0a6b55dd8c3.parquet                  22878644 9/10/2026 4:02:59 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=08\part-00001-396a08fe793a487f855fd0a6b55dd8c3.parquet                  22756839 9/10/2026 4:03:04 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=08\part-00002-396a08fe793a487f855fd0a6b55dd8c3.parquet                  23415888 9/10/2026 4:03:12 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=08\part-00003-396a08fe793a487f855fd0a6b55dd8c3.parquet                  9763427  9/10/2026 4:02:31 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=09\part-00000-1e96e315cf5345f982177a5b48e1cdab.parquet                  22255160 9/10/2026 4:04:51 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=09\part-00001-1e96e315cf5345f982177a5b48e1cdab.parquet                  21852749 9/10/2026 4:04:39 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=09\part-00002-1e96e315cf5345f982177a5b48e1cdab.parquet                  22174517 9/10/2026 4:04:36 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=09\part-00003-1e96e315cf5345f982177a5b48e1cdab.parquet                  24429261 9/10/2026 4:04:32 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=10\part-00000-8fe8675e552c487198e1db0801b90684.parquet                  21913093 9/10/2026 4:06:26 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=10\part-00001-8fe8675e552c487198e1db0801b90684.parquet                  21976847 9/10/2026 4:06:30 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=10\part-00002-8fe8675e552c487198e1db0801b90684.parquet                  21764857 9/10/2026 4:06:53 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=10\part-00003-8fe8675e552c487198e1db0801b90684.parquet                  28316209 9/10/2026 4:07:01 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=11\part-00000-0ef627d651524719aad418f166cffdba.parquet                  21854832 9/10/2026 4:10:05 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=11\part-00001-0ef627d651524719aad418f166cffdba.parquet                  21695498 9/10/2026 4:10:01 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=11\part-00002-0ef627d651524719aad418f166cffdba.parquet                  22241990 9/10/2026 4:10:03 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=11\part-00003-0ef627d651524719aad418f166cffdba.parquet                  23294562 9/10/2026 4:09:54 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=12\part-00000-09b0c507f9cd4ab7ade91753eb06eb3d.parquet                  21808982 9/10/2026 4:12:25 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=12\part-00001-09b0c507f9cd4ab7ade91753eb06eb3d.parquet                  21683271 9/10/2026 4:12:28 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=12\part-00002-09b0c507f9cd4ab7ade91753eb06eb3d.parquet                  23031577 9/10/2026 4:12:23 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\taxi\year=2025\month=12\part-00003-09b0c507f9cd4ab7ade91753eb06eb3d.parquet                  25901430 9/10/2026 4:12:28 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\weather\year=2025                                                                                     9/10/2026 9:41:09 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\bronze\weather\year=2025\month=01                                                                            9/10/2026 9:41:09 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\gold\zone_hourly                                                                                             9/10/2026 9:41:09 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\gold\.gitkeep                                                                                       0        9/10/2026 9:23:46 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\gold\zone_hourly\year=2025                                                                                   9/10/2026 9:41:09 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\gold\zone_hourly\year=2025\month=01                                                                          9/10/2026 9:41:09 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\quarantine\run_id=7b4233cf-e696-48db-a09a-a260e88dd70b                                                       9/10/2026 5:36:24 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\quarantine\run_id=c036197a-e50f-45d4-b385-b0b55d84c587                                                       9/10/2026 5:57:11 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\quarantine\run_id=e9d9c118-8e85-4056-8ba4-72b8d60ab6d4                                                       9/10/2026 5:31:35 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\quarantine\.gitkeep                                                                                 0        9/10/2026 9:23:47 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\quarantine\run_id=7b4233cf-e696-48db-a09a-a260e88dd70b\source=nyc_311                                        9/10/2026 5:36:24 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\quarantine\run_id=7b4233cf-e696-48db-a09a-a260e88dd70b\source=nyc_311\part-00000.parquet            9423199  9/10/2026 5:38:14 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\quarantine\run_id=c036197a-e50f-45d4-b385-b0b55d84c587\source=yellow_taxi                                    9/10/2026 5:57:11 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\quarantine\run_id=c036197a-e50f-45d4-b385-b0b55d84c587\source=yellow_taxi\part-00000.parquet        185067   9/10/2026 6:03:32 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\quarantine\run_id=e9d9c118-8e85-4056-8ba4-72b8d60ab6d4\source=open_meteo_weather                             9/10/2026 5:31:35 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\quarantine\run_id=e9d9c118-8e85-4056-8ba4-72b8d60ab6d4\source=open_meteo_weather\part-00000.parquet 1419     9/10/2026 5:31:35 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311                                                                                           9/10/2026 1:47:09 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi                                                                                                     9/10/2026 9:41:08 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi_zones                                                                                               9/10/2026 11:32:54 AM
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather                                                                                                  9/10/2026 3:09:47 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\.gitkeep                                                                                        0        9/10/2026 9:23:46 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025                                                                                 9/10/2026 2:38:25 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=01                                                                        9/10/2026 1:51:56 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=02                                                                        9/10/2026 1:54:44 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=03                                                                        9/10/2026 1:58:16 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=04                                                                        9/10/2026 2:01:35 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=05                                                                        9/10/2026 2:04:52 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=06                                                                        9/10/2026 2:09:46 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=07                                                                        9/10/2026 2:16:48 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=08                                                                        9/10/2026 2:23:02 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=09                                                                        9/10/2026 2:27:03 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=10                                                                        9/10/2026 2:32:35 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=11                                                                        9/10/2026 2:38:25 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=12                                                                        9/10/2026 2:45:14 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=01\311_2025_01_page_0001.json                                    63221100 9/10/2026 1:47:30 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=01\311_2025_01_page_0002.json                                    63549112 9/10/2026 1:48:06 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=01\311_2025_01_page_0003.json                                    63510625 9/10/2026 1:48:56 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=01\311_2025_01_page_0004.json                                    63208139 9/10/2026 1:49:37 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=01\311_2025_01_page_0005.json                                    63679219 9/10/2026 1:50:17 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=01\311_2025_01_page_0006.json                                    63689165 9/10/2026 1:51:05 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=01\311_2025_01_page_0007.json                                    60596860 9/10/2026 1:51:39 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=02\311_2025_02_page_0001.json                                    62774289 9/10/2026 1:52:05 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=02\311_2025_02_page_0002.json                                    62645554 9/10/2026 1:52:40 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=02\311_2025_02_page_0003.json                                    62669735 9/10/2026 1:53:03 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=02\311_2025_02_page_0004.json                                    63081272 9/10/2026 1:53:34 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=02\311_2025_02_page_0005.json                                    62280376 9/10/2026 1:54:03 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=02\311_2025_02_page_0006.json                                    6689100  9/10/2026 1:54:39 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=03\311_2025_03_page_0001.json                                    62642028 9/10/2026 1:55:06 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=03\311_2025_03_page_0002.json                                    62615265 9/10/2026 1:55:33 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=03\311_2025_03_page_0003.json                                    62466798 9/10/2026 1:56:11 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=03\311_2025_03_page_0004.json                                    62577040 9/10/2026 1:56:55 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=03\311_2025_03_page_0005.json                                    62693571 9/10/2026 1:57:36 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=03\311_2025_03_page_0006.json                                    38932312 9/10/2026 1:57:59 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=04\311_2025_04_page_0001.json                                    62428883 9/10/2026 1:58:33 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=04\311_2025_04_page_0002.json                                    62798105 9/10/2026 1:59:01 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=04\311_2025_04_page_0003.json                                    62483420 9/10/2026 1:59:23 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=04\311_2025_04_page_0004.json                                    62259264 9/10/2026 1:59:46 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=04\311_2025_04_page_0005.json                                    62358924 9/10/2026 2:00:31 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=04\311_2025_04_page_0006.json                                    28183558 9/10/2026 2:01:22 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=05\311_2025_05_page_0001.json                                    62272477 9/10/2026 2:01:45 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=05\311_2025_05_page_0002.json                                    62451516 9/10/2026 2:02:08 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=05\311_2025_05_page_0003.json                                    62282322 9/10/2026 2:02:44 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=05\311_2025_05_page_0004.json                                    62460502 9/10/2026 2:03:22 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=05\311_2025_05_page_0005.json                                    62506673 9/10/2026 2:04:05 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=05\311_2025_05_page_0006.json                                    56201148 9/10/2026 2:04:36 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=06\311_2025_06_page_0001.json                                    62478520 9/10/2026 2:05:23 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=06\311_2025_06_page_0002.json                                    62214974 9/10/2026 2:06:14 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=06\311_2025_06_page_0003.json                                    62057193 9/10/2026 2:06:45 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=06\311_2025_06_page_0004.json                                    62288525 9/10/2026 2:07:41 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=06\311_2025_06_page_0005.json                                    61245218 9/10/2026 2:08:31 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=06\311_2025_06_page_0006.json                                    61692752 9/10/2026 2:09:20 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=06\311_2025_06_page_0007.json                                    8021609  9/10/2026 2:09:41 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=07\311_2025_07_page_0001.json                                    62011904 9/10/2026 2:10:02 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=07\311_2025_07_page_0002.json                                    62182096 9/10/2026 2:10:34 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=07\311_2025_07_page_0003.json                                    62108997 9/10/2026 2:12:50 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=07\311_2025_07_page_0004.json                                    62106434 9/10/2026 2:13:37 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=07\311_2025_07_page_0005.json                                    62393531 9/10/2026 2:15:21 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=07\311_2025_07_page_0006.json                                    62009839 9/10/2026 2:16:13 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=07\311_2025_07_page_0007.json                                    19692761 9/10/2026 2:16:39 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=08\311_2025_08_page_0001.json                                    62244945 9/10/2026 2:17:05 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=08\311_2025_08_page_0002.json                                    62189568 9/10/2026 2:17:57 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=08\311_2025_08_page_0003.json                                    62211784 9/10/2026 2:18:50 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=08\311_2025_08_page_0004.json                                    62179351 9/10/2026 2:19:40 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=08\311_2025_08_page_0005.json                                    62117957 9/10/2026 2:20:08 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=08\311_2025_08_page_0006.json                                    62054991 9/10/2026 2:22:11 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=08\311_2025_08_page_0007.json                                    4974368  9/10/2026 2:23:00 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=09\311_2025_09_page_0001.json                                    62120036 9/10/2026 2:23:31 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=09\311_2025_09_page_0002.json                                    62182349 9/10/2026 2:23:53 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=09\311_2025_09_page_0003.json                                    61940561 9/10/2026 2:24:37 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=09\311_2025_09_page_0004.json                                    61982144 9/10/2026 2:25:07 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=09\311_2025_09_page_0005.json                                    62214285 9/10/2026 2:25:58 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=09\311_2025_09_page_0006.json                                    61954065 9/10/2026 2:26:41 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=09\311_2025_09_page_0007.json                                    3313318  9/10/2026 2:27:01 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=10\311_2025_10_page_0001.json                                    61929805 9/10/2026 2:27:34 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=10\311_2025_10_page_0002.json                                    62398934 9/10/2026 2:28:00 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=10\311_2025_10_page_0003.json                                    62910006 9/10/2026 2:28:27 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=10\311_2025_10_page_0004.json                                    62772811 9/10/2026 2:30:12 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=10\311_2025_10_page_0005.json                                    62549657 9/10/2026 2:31:01 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=10\311_2025_10_page_0006.json                                    62942656 9/10/2026 2:31:39 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=10\311_2025_10_page_0007.json                                    45836689 9/10/2026 2:32:18 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=11\311_2025_11_page_0001.json                                    62851079 9/10/2026 2:33:26 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=11\311_2025_11_page_0002.json                                    62941300 9/10/2026 2:34:08 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=11\311_2025_11_page_0003.json                                    66659248 9/10/2026 2:34:54 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=11\311_2025_11_page_0004.json                                    71789033 9/10/2026 2:35:38 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=11\311_2025_11_page_0005.json                                    72826377 9/10/2026 2:36:38 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=11\311_2025_11_page_0006.json                                    75049188 9/10/2026 2:37:55 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=11\311_2025_11_page_0007.json                                    7430720  9/10/2026 2:38:19 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=12\311_2025_12_page_0001.json                                    72886994 9/10/2026 2:38:37 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=12\311_2025_12_page_0002.json                                    74224370 9/10/2026 2:39:24 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=12\311_2025_12_page_0003.json                                    73287733 9/10/2026 2:40:46 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=12\311_2025_12_page_0004.json                                    71936310 9/10/2026 2:41:57 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=12\311_2025_12_page_0005.json                                    71424510 9/10/2026 2:42:32 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=12\311_2025_12_page_0006.json                                    72082504 9/10/2026 2:44:07 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\complaints_311\year=2025\month=12\311_2025_12_page_0007.json                                    45511297 9/10/2026 2:44:57 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025                                                                                           9/10/2026 11:28:20 AM
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=01                                                                                  9/10/2026 11:17:42 AM
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=02                                                                                  9/10/2026 11:24:22 AM
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=03                                                                                  9/10/2026 11:24:56 AM
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=04                                                                                  9/10/2026 11:25:24 AM
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=05                                                                                  9/10/2026 11:25:51 AM
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=06                                                                                  9/10/2026 11:26:16 AM
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=07                                                                                  9/10/2026 11:26:41 AM
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=08                                                                                  9/10/2026 11:27:03 AM
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=09                                                                                  9/10/2026 11:27:28 AM
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=10                                                                                  9/10/2026 11:27:54 AM
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=11                                                                                  9/10/2026 11:28:20 AM
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=12                                                                                  9/10/2026 11:28:49 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=01\yellow_tripdata_2025-01.parquet                                         59158238 9/10/2026 11:17:42 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=02\yellow_tripdata_2025-02.parquet                                         60343086 9/10/2026 11:24:22 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=03\yellow_tripdata_2025-03.parquet                                         69964745 9/10/2026 11:24:56 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=04\yellow_tripdata_2025-04.parquet                                         67352824 9/10/2026 11:25:24 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=05\yellow_tripdata_2025-05.parquet                                         77837865 9/10/2026 11:25:51 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=06\yellow_tripdata_2025-06.parquet                                         73542954 9/10/2026 11:26:16 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=07\yellow_tripdata_2025-07.parquet                                         66943728 9/10/2026 11:26:41 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=08\yellow_tripdata_2025-08.parquet                                         62293743 9/10/2026 11:27:03 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=09\yellow_tripdata_2025-09.parquet                                         72432945 9/10/2026 11:27:28 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=10\yellow_tripdata_2025-10.parquet                                         75267589 9/10/2026 11:27:54 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=11\yellow_tripdata_2025-11.parquet                                         71134255 9/10/2026 11:28:20 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi\year=2025\month=12\yellow_tripdata_2025-12.parquet                                         73701327 9/10/2026 11:28:49 AM
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi_zones\shapefile                                                                                     9/10/2026 11:32:55 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi_zones\taxi_zones.zip                                                                       1022574  9/10/2026 11:32:54 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi_zones\taxi_zone_lookup.csv                                                                 12331    9/10/2026 11:32:50 AM
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi_zones\shapefile\taxi_zones                                                                          9/10/2026 11:32:55 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi_zones\shapefile\taxi_zones\taxi_zones.cpg                                                  5        9/10/2026 11:32:55 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi_zones\shapefile\taxi_zones\taxi_zones.dbf                                                  59927    9/10/2026 11:32:55 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi_zones\shapefile\taxi_zones\taxi_zones.prj                                                  565      9/10/2026 11:32:55 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi_zones\shapefile\taxi_zones\taxi_zones.shp                                                  1586264  9/10/2026 11:32:55 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\taxi_zones\shapefile\taxi_zones\taxi_zones.shx                                                  2204     9/10/2026 11:32:55 AM
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025                                                                                        9/10/2026 3:10:12 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=01                                                                               9/10/2026 3:09:49 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=02                                                                               9/10/2026 3:09:52 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=03                                                                               9/10/2026 3:09:55 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=04                                                                               9/10/2026 3:09:58 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=05                                                                               9/10/2026 3:09:59 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=06                                                                               9/10/2026 3:10:01 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=07                                                                               9/10/2026 3:10:04 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=08                                                                               9/10/2026 3:10:06 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=09                                                                               9/10/2026 3:10:08 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=10                                                                               9/10/2026 3:10:10 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=11                                                                               9/10/2026 3:10:12 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=12                                                                               9/10/2026 3:10:14 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=01\weather_nyc_2025_01.json                                             44099    9/10/2026 3:09:49 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=02\weather_nyc_2025_02.json                                             39600    9/10/2026 3:09:52 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=03\weather_nyc_2025_03.json                                             43322    9/10/2026 3:09:55 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=04\weather_nyc_2025_04.json                                             42228    9/10/2026 3:09:58 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=05\weather_nyc_2025_05.json                                             44106    9/10/2026 3:09:59 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=06\weather_nyc_2025_06.json                                             42665    9/10/2026 3:10:01 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=07\weather_nyc_2025_07.json                                             44079    9/10/2026 3:10:04 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=08\weather_nyc_2025_08.json                                             43947    9/10/2026 3:10:06 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=09\weather_nyc_2025_09.json                                             42499    9/10/2026 3:10:08 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=10\weather_nyc_2025_10.json                                             43724    9/10/2026 3:10:10 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=11\weather_nyc_2025_11.json                                             41756    9/10/2026 3:10:12 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\raw\weather\year=2025\month=12\weather_nyc_2025_12.json                                             43855    9/10/2026 3:10:14 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\silver\complaints_311                                                                                        9/10/2026 9:41:09 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\silver\taxi                                                                                                  9/10/2026 9:41:09 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\silver\weather                                                                                               9/10/2026 9:41:09 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\silver\.gitkeep                                                                                     0        9/10/2026 9:23:46 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\silver\complaints_311\year=2025                                                                              9/10/2026 9:41:09 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\silver\complaints_311\year=2025\month=01                                                                     9/10/2026 9:41:09 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\silver\taxi\year=2025                                                                                        9/10/2026 9:41:09 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\silver\taxi\year=2025\month=01                                                                               9/10/2026 9:41:09 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\silver\weather\year=2025                                                                                     9/10/2026 9:41:09 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data\silver\weather\year=2025\month=01                                                                            9/10/2026 9:41:09 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data_quality\.gitkeep                                                                                    0        9/10/2026 9:23:44 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data_quality\dq_rules.csv                                                                                8615     9/10/2026 5:16:04 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data_quality\phase7_data_quality_rules.md                                                                5562     9/10/2026 5:16:11 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\data_quality\reason_codes.csv                                                                            3007     9/10/2026 5:23:54 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\docker\.gitkeep                                                                                          0        9/10/2026 9:23:46 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\docker\docker-compose.yml                                                                                574      9/10/2026 9:44:16 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\documentation\.gitkeep                                                                                   0        9/10/2026 9:23:46 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\documentation\data_lake_layers.md                                                                        6615     9/10/2026 3:23:17 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\documentation\dimensional_model_draft.md                                                                 684      9/10/2026 9:41:48 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\documentation\phase1_environment.md                                                                      3031     9/10/2026 1:33:17 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\documentation\phase2_data_acquisition.md                                                                 2196     9/10/2026 1:31:43 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\documentation\phase3_raw_data_storage.md                                                                 869      9/10/2026 3:19:01 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\documentation\phase5_pyspark_processing.md                                                               3069     9/10/2026 4:19:24 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\documentation\phase8_quarantine.md                                                                       3953     9/10/2026 5:24:16 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\documentation\phase8_quarantine_results.md                                                               4557     9/10/2026 6:07:30 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\logs\pipeline_runs.jsonl                                                                                 35015    9/10/2026 4:12:28 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\model\.gitkeep                                                                                           0        9/10/2026 9:23:44 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\python\acquisition                                                                                                9/10/2026 1:25:29 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\python\profiling                                                                                                  9/10/2026 5:02:45 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\python\reports                                                                                                    9/10/2026 4:48:43 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\python\__pycache__                                                                                                9/10/2026 3:12:59 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\python\.gitkeep                                                                                          0        9/10/2026 9:23:41 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\python\logging_utils.py                                                                                  1812     9/10/2026 9:40:28 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\python\raw_integrity.py                                                                                  3284     9/10/2026 1:37:25 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\python\reconciliation_utils.py                                                                           1262     9/10/2026 9:40:43 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\python\verify_raw_integrity.py                                                                           5046     9/10/2026 3:12:44 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\python\__init__.py                                                                                       0        9/10/2026 11:15:43 AM
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\python\acquisition\__pycache__                                                                                    9/10/2026 1:44:08 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\python\acquisition\download_311.py                                                                       15759    9/10/2026 1:42:18 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\python\acquisition\download_taxi.py                                                                      9429     9/10/2026 11:16:39 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\python\acquisition\download_taxi_zones.py                                                                6300     9/10/2026 11:32:09 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\python\acquisition\download_weather.py                                                                   14819    9/10/2026 1:43:54 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\python\acquisition\__init__.py                                                                           0        9/10/2026 11:15:45 AM
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\python\profiling\__pycache__                                                                                      9/10/2026 5:07:28 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\python\profiling\profile_311.py                                                                          19992    9/10/2026 4:50:18 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\python\profiling\profile_taxi_zones.py                                                                   9819     9/10/2026 5:07:21 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\python\profiling\profile_weather.py                                                                      12878    9/10/2026 5:02:21 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\python\reports\profiling                                                                                          9/10/2026 4:48:43 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\acquisition                                                                                               9/10/2026 3:09:49 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling                                                                                                 9/10/2026 5:08:16 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\quarantine                                                                                                9/10/2026 5:31:35 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\raw_integrity                                                                                             9/10/2026 1:38:12 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\reconciliation                                                                                            9/10/2026 11:22:14 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\.gitkeep                                                                                         0        9/10/2026 9:23:45 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\acquisition\complaints_311_manifest.csv                                                          15425    9/10/2026 2:45:14 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\acquisition\taxi_download_manifest.csv                                                           2865     9/10/2026 11:28:49 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\acquisition\taxi_zone_download_manifest.csv                                                      450      9/10/2026 11:32:55 AM
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\acquisition\weather_download_manifest.csv                                                        3978     9/10/2026 3:10:14 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\311_candidate_anomalies.csv                                                            518      9/10/2026 4:55:32 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\311_column_types.csv                                                                   1308     9/10/2026 4:52:58 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\311_definitely_invalid.csv                                                             544      9/10/2026 4:54:03 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\311_duplicate_count.csv                                                                89       9/10/2026 4:55:01 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\311_missing_values.csv                                                                 279      9/10/2026 4:53:31 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\311_profile_summary.json                                                               2055     9/10/2026 4:57:37 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\311_schema_differences.csv                                                             412      9/10/2026 4:51:30 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\311_top_distributions.csv                                                              1569     9/10/2026 4:57:37 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\phase6_summary.md                                                                      8328     9/10/2026 5:08:44 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\taxi_candidate_anomalies.csv                                                           1090     9/10/2026 4:25:46 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\taxi_definitely_invalid.csv                                                            382      9/10/2026 4:25:38 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\taxi_duplicate_count.csv                                                               119      9/10/2026 4:36:40 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\taxi_missing_values.csv                                                                530      9/10/2026 4:25:31 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\taxi_monthly_rows.csv                                                                  664      9/10/2026 4:24:19 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\taxi_outlier_quantiles.csv                                                             358      9/10/2026 4:28:21 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\taxi_profile_summary.json                                                              1628     9/10/2026 4:36:40 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\taxi_schema_by_month.csv                                                               8702     9/10/2026 4:24:19 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\taxi_schema_differences.csv                                                            5975     9/10/2026 4:24:19 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\taxi_zone_candidate_anomalies.csv                                                      394      9/10/2026 5:07:31 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\taxi_zone_definitely_invalid.csv                                                       314      9/10/2026 5:07:31 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\taxi_zone_distributions.csv                                                            302      9/10/2026 5:07:31 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\taxi_zone_geographic_files.csv                                                         164      9/10/2026 5:07:31 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\taxi_zone_profile_summary.json                                                         903      9/10/2026 5:07:31 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\taxi_zone_schema.csv                                                                   140      9/10/2026 5:07:31 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\weather_candidate_anomalies.csv                                                        592      9/10/2026 5:03:14 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\weather_definitely_invalid.csv                                                         404      9/10/2026 5:03:13 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\weather_missing_values.csv                                                             246      9/10/2026 5:03:13 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\weather_outlier_quantiles.csv                                                          464      9/10/2026 5:03:14 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\weather_profile_summary.json                                                           1274     9/10/2026 5:03:14 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\profiling\weather_schema_by_month.csv                                                            2338     9/10/2026 5:03:13 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\quarantine\quarantine_latest_summary.json                                                        304      9/10/2026 6:03:32 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\reports\raw_integrity\raw_file_checksums.csv                                                             20753    9/10/2026 3:10:52 PM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\spark\__pycache__                                                                                                 9/10/2026 5:33:49 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\spark\.gitkeep                                                                                           0        9/10/2026 9:23:43 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\spark\build_quarantine.py                                                                                23403    9/10/2026 5:33:44 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\spark\build_taxi_bronze.py                                                                               9612     9/10/2026 3:41:23 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\spark\inspect_taxi.py                                                                                    2748     9/10/2026 3:34:20 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\spark\profile_taxi.py                                                                                    20706    9/10/2026 4:23:51 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\spark\validate_taxi_bronze.py                                                                            2898     9/10/2026 3:49:46 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\sql\.gitkeep                                                                                             0        9/10/2026 9:23:43 AM 
+FOLDER C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\tests\__pycache__                                                                                                 9/10/2026 5:27:25 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\tests\.gitkeep                                                                                           0        9/10/2026 9:23:44 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\tests\test_dq_rules_catalog.py                                                                           1514     9/10/2026 5:16:21 PM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\tests\test_project_structure.py                                                                          572      9/10/2026 9:45:15 AM 
+FILE   C:\Users\sameer.saleem\Desktop\NYC_Urban_Intelligence\tests\test_quarantine_contract.py                                                                        2216     9/10/2026 5:24:10 PM 
+
+
+
