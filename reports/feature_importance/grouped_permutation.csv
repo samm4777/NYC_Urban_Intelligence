@@ -1,0 +1,6 @@
+rank,feature_group,features,baseline_mae,mae_increase_mean,mae_increase_std
+1,historical_demand,"lag_1h, lag_24h, lag_168h",4.1399042740009175,33.850882602996855,0.031575360455797015
+2,time_calendar,"hour, day_of_week, month, is_weekend",4.1399042740009175,0.514345972515318,0.008234083434917881
+3,location,"taxi_zone_id, borough",4.1399042740009175,0.11752013461308823,0.0013675374669633556
+4,311_activity,"complaints_lag_1h, complaints_lag_24h",4.1399042740009175,0.030265040584369334,0.0014952076366539244
+5,weather,"temperature_c, rain_mm, snowfall_cm, weather_condition",4.1399042740009175,-0.00010839930149260842,0.0007698235333977813
