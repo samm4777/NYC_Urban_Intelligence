@@ -1,6 +1,8 @@
 """
 NYC Urban Intelligence Platform
-Phase 19 - Airflow Orchestration
+
+Phase 19 — Airflow Orchestration
+Phase 40 — Automated Testing integration
 
 Implemented architecture:
 
@@ -11,14 +13,17 @@ Ingestion
     -> Gold
     -> SQL Warehouse
     -> Post-load Tests
+    -> Phase 40 Pytest Gate
 
 Gold remains the business-ready analytical layer.
 Azure SQL is the serving warehouse loaded from Gold.
+
 Airflow orchestrates the existing ETL components rather than
 reimplementing transformation logic inside the DAG.
 
 The DAG defaults to one month only for controlled incremental execution.
 """
+
 from datetime import timedelta
 import os
 import sys
@@ -55,7 +60,7 @@ if [ "$START_MONTH" -gt "$END_MONTH" ]; then
     exit 1
 fi
 
-MONTHS=$(seq "$START_MONTH" "$END_MONTH" | tr '\\n' ' ')
+MONTHS=$(seq "$START_MONTH" "$END_MONTH" | tr '\n' ' ')
 echo "Processing 2025 month(s): $MONTHS"
 """
 
@@ -95,6 +100,7 @@ with DAG(
         "data-engineering",
         "urban-intelligence",
         "phase19",
+        "phase40",
     ],
 ) as dag:
 
@@ -187,6 +193,20 @@ with DAG(
 """,
     )
 
+    run_phase40_pytest = BashOperator(
+        retries=2,
+        retry_delay=timedelta(minutes=1),
+        task_id="run_phase40_pytest",
+        cwd=str(PROJECT_ROOT),
+        env=SQL_ENV,
+        append_env=True,
+        bash_command=f"""
+set -euo pipefail
+
+{ETL_PYTHON} -m pytest tests/test_warehouse_quality.py -q
+""",
+    )
+
     (
         ingest_sources
         >> build_bronze
@@ -195,4 +215,5 @@ with DAG(
         >> build_gold
         >> load_sql_warehouse
         >> run_post_load_tests
+        >> run_phase40_pytest
     )
