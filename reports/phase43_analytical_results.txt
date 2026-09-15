@@ -1,0 +1,259 @@
+====================================================================================================
+RESULT SET 1
+====================================================================================================
+location_id	zone_name	borough	total_trips	pct_of_city_trips
+237	Upper East Side South	Manhattan	2125550	4.3720
+161	Midtown Center	Manhattan	2089736	4.2983
+132	JFK Airport	Queens	2062433	4.2422
+236	Upper East Side North	Manhattan	1874790	3.8562
+186	Penn Station/Madison Sq West	Manhattan	1543150	3.1741
+230	Times Sq/Theatre District	Manhattan	1516356	3.1190
+162	Midtown East	Manhattan	1508151	3.1021
+142	Lincoln Square East	Manhattan	1387600	2.8541
+170	Murray Hill	Manhattan	1294356	2.6623
+234	Union Sq	Manhattan	1293600	2.6608
+138	LaGuardia Airport	Queens	1291335	2.6561
+68	East Chelsea	Manhattan	1251579	2.5743
+163	Midtown North	Manhattan	1238210	2.5469
+79	East Village	Manhattan	1222390	2.5143
+239	Upper West Side South	Manhattan	1220394	2.5102
+
+====================================================================================================
+RESULT SET 2
+====================================================================================================
+hour_of_day	daypart	total_trips	avg_zone_hour_trips
+18	Evening	3466648	36.11
+17	Afternoon	3284288	34.21
+19	Evening	3066019	31.94
+16	Afternoon	2928341	30.51
+21	Evening	2895849	30.17
+15	Afternoon	2847361	29.66
+20	Evening	2820775	29.38
+14	Afternoon	2733950	28.48
+22	Evening	2725385	28.39
+13	Afternoon	2547808	26.54
+12	Afternoon	2429813	25.31
+11	Morning	2229683	23.23
+23	Evening	2150860	22.41
+10	Morning	2078768	21.65
+9	Morning	1994440	20.78
+8	Morning	1864858	19.43
+0	Night	1537189	16.01
+7	Morning	1379363	14.37
+1	Night	1012190	10.54
+6	Morning	756774	7.88
+2	Night	666835	6.95
+3	Night	455923	4.75
+5	Night	384335	4.00
+4	Night	359840	3.75
+
+====================================================================================================
+RESULT SET 3
+====================================================================================================
+location_id	zone_name	borough	total_trips	total_revenue	revenue_per_trip
+132	JFK Airport	Queens	2062433	149783808.31	72.62
+138	LaGuardia Airport	Queens	1291335	86021679.55	66.61
+161	Midtown Center	Manhattan	2089736	52074500.20	24.92
+237	Upper East Side South	Manhattan	2125550	43564381.74	20.50
+230	Times Sq/Theatre District	Manhattan	1516356	41172767.33	27.15
+236	Upper East Side North	Manhattan	1874790	38930332.65	20.77
+186	Penn Station/Madison Sq West	Manhattan	1543150	37949730.24	24.59
+162	Midtown East	Manhattan	1508151	36405418.09	24.14
+68	East Chelsea	Manhattan	1251579	31302448.81	25.01
+163	Midtown North	Manhattan	1238210	30447739.69	24.59
+142	Lincoln Square East	Manhattan	1387600	30149453.80	21.73
+170	Murray Hill	Manhattan	1294356	30143283.38	23.29
+234	Union Sq	Manhattan	1293600	28977137.00	22.40
+79	East Village	Manhattan	1222390	26893753.30	22.00
+48	Clinton East	Manhattan	1153123	26734905.72	23.18
+
+====================================================================================================
+RESULT SET 4
+====================================================================================================
+month_number	month_name	total_trips	total_revenue	complaints_311
+1	January	3465589	88653301.50	344934
+2	February	3568814	89239654.75	251489
+3	March	4135913	108506802.55	276641
+4	April	3961414	105199596.48	267674
+5	May	4582056	122966401.05	289747
+6	June	4314123	117986132.03	300969
+7	July	3890603	104195157.67	310573
+8	August	3566471	93940545.09	299569
+9	September	4242804	117398645.74	298377
+10	October	4420164	119041096.10	332689
+11	November	4171963	106680715.98	301910
+12	December	4297381	132561613.33	328824
+
+====================================================================================================
+RESULT SET 5
+====================================================================================================
+weather_condition	observed_city_hours	avg_city_trips_per_hour	avg_city_revenue_per_hour	avg_city_complaints_per_hour
+Heavy rain	13	7083.77	188235.73	370.54
+Slight rain	120	6681.65	178381.33	397.09
+Dense drizzle	63	6578.76	172858.45	383.30
+Moderate drizzle	187	6419.24	172455.43	389.29
+Light drizzle	595	6371.77	171038.97	414.64
+Heavy snowfall	15	6145.87	162176.54	366.20
+Moderate rain	96	5748.35	156358.70	390.11
+Mainly clear	865	5647.28	151650.65	428.44
+Overcast	3209	5597.03	151149.93	411.03
+Slight snowfall	62	5586.34	147830.84	423.68
+Partly cloudy	633	5571.19	150036.53	431.71
+Clear sky	2844	5155.51	137929.68	406.19
+Moderate snowfall	58	5040.71	129960.63	344.59
+
+====================================================================================================
+RESULT SET 6
+====================================================================================================
+temperature_band	observed_city_hours	avg_city_trips_per_hour	avg_city_complaints_per_hour
+Freezing (<0C)	1329	4746.32	420.54
+Cold (0-10C)	2306	5341.06	389.37
+Cool (10-20C)	2608	5389.71	382.45
+Warm (20-30C)	2185	6171.14	445.41
+Hot (30C+)	332	7387.48	529.97
+
+====================================================================================================
+RESULT SET 7
+====================================================================================================
+complaint_type	dominant_zone	borough	dominant_zone_complaints	category_total	dominant_zone_share_pct
+
+====================================================================================================
+RESULT SET 8
+====================================================================================================
+pearson_zone_trips_vs_complaints
+-0.118652
+
+====================================================================================================
+RESULT SET 9
+====================================================================================================
+zone_name	borough	total_trips	total_complaints	complaints_per_1000_trips
+Williamsbridge/Olinville	Bronx	13856	157096	11337.76
+Crown Heights North	Brooklyn	85179	54502	639.85
+Central Harlem North	Manhattan	146579	52183	356.01
+Flatbush/Ditmas Park	Brooklyn	48327	50166	1038.05
+Washington Heights South	Manhattan	103105	48135	466.85
+East New York	Brooklyn	57150	46226	808.85
+Washington Heights North	Manhattan	46041	39968	868.10
+South Ozone Park	Queens	41736	39898	955.96
+Prospect-Lefferts Gardens	Brooklyn	50909	39074	767.53
+Jackson Heights	Queens	55943	35739	638.85
+Astoria	Queens	97674	35256	360.96
+Bay Ridge	Brooklyn	21307	35040	1644.53
+Hamilton Heights	Manhattan	93233	33940	364.03
+Central Harlem	Manhattan	214333	33746	157.45
+Bushwick South	Brooklyn	70158	33547	478.16
+Van Cortlandt Village	Bronx	8737	32513	3721.30
+Mount Hope	Bronx	12304	32374	2631.18
+East Concourse/Concourse Village	Bronx	18360	32159	1751.58
+Bedford Park	Bronx	10406	31927	3068.13
+Bensonhurst West	Brooklyn	9067	31378	3460.68
+Kew Gardens Hills	Queens	6853	30872	4504.89
+Ridgewood	Queens	24483	30797	1257.89
+Highbridge	Bronx	10633	29842	2806.55
+Bushwick North	Brooklyn	44474	29757	669.09
+University Heights/Morris Heights	Bronx	12759	28814	2258.33
+
+====================================================================================================
+RESULT SET 10
+====================================================================================================
+zone_name	borough	prediction_rows	total_actual_demand	mae	rmse	mean_bias
+Great Kills Park	Staten Island	1464	0	0.0020	0.0029	0.0020
+Freshkills Park	Staten Island	1464	0	0.0031	0.0041	0.0031
+Governor's Island/Ellis Island/Liberty Island	Manhattan	4392	3	0.0036	0.0306	0.0022
+Charleston/Tottenville	Staten Island	1464	3	0.0085	0.0601	0.0045
+Eltingville/Annadale/Prince's Bay	Staten Island	1464	5	0.0098	0.0601	0.0030
+Arden Heights	Staten Island	1464	4	0.0141	0.0578	0.0088
+Rossville/Woodrow	Staten Island	1464	8	0.0168	0.0849	0.0060
+Great Kills	Staten Island	1464	11	0.0213	0.0969	0.0065
+Port Richmond	Staten Island	1464	14	0.0248	0.1260	0.0060
+Oakwood	Staten Island	1464	28	0.0383	0.1596	0.0015
+Rikers Island	Bronx	1464	4	0.0405	0.0921	0.0351
+Saint George/New Brighton	Staten Island	1464	26	0.0429	0.1413	0.0087
+Jamaica Bay	Queens	1464	11	0.0432	0.1074	0.0286
+Mariners Harbor	Staten Island	1464	40	0.0514	0.1786	-0.0018
+New Dorp/Midland Beach	Staten Island	1464	41	0.0525	0.1686	-0.0015
+
+====================================================================================================
+RESULT SET 11
+====================================================================================================
+zone_name	borough	prediction_rows	total_actual_demand	mae	rmse	mean_bias
+JFK Airport	Queens	1464	330457	41.8402	58.8362	5.9161
+LaGuardia Airport	Queens	1464	219452	35.8586	53.3461	1.5805
+Upper East Side South	Manhattan	1464	390398	31.5418	46.4566	6.3910
+Penn Station/Madison Sq West	Manhattan	1464	265868	31.1510	43.8664	3.4307
+Upper East Side North	Manhattan	1464	346928	30.0354	44.0555	8.4543
+Midtown Center	Manhattan	1464	345304	29.6189	46.4154	6.1975
+Lincoln Square East	Manhattan	1464	258438	27.7786	44.5708	2.7991
+East Village	Manhattan	1464	212282	24.7134	45.9990	-0.2125
+Times Sq/Theatre District	Manhattan	1464	247705	24.5824	35.6353	3.4793
+Midtown East	Manhattan	1464	259091	22.9659	33.6796	4.3943
+Upper West Side South	Manhattan	1464	223753	21.3478	30.7863	3.8750
+East Chelsea	Manhattan	1464	211934	20.2732	27.8051	4.2069
+Union Sq	Manhattan	1464	220786	19.9361	29.2568	0.8032
+West Village	Manhattan	1464	176833	19.6154	31.4081	-1.2023
+Midtown North	Manhattan	1464	216120	19.4280	28.9282	3.4029
+
+====================================================================================================
+RESULT SET 12
+====================================================================================================
+hour_of_day	daypart	prediction_rows	total_actual_demand	mae	mean_bias
+19	Evening	16043	523429	5.9110	1.6119
+21	Evening	16043	491315	5.8972	0.1953
+22	Evening	16043	457641	5.8312	0.7562
+20	Evening	16043	481830	5.7115	1.2590
+17	Afternoon	16043	562175	5.6363	0.4783
+18	Evening	16043	582606	5.6039	0.9437
+23	Evening	16043	368207	5.4612	0.8045
+16	Afternoon	16043	521201	4.7485	0.8880
+15	Afternoon	16043	511677	4.5850	0.3084
+14	Afternoon	16043	482200	4.4564	0.2938
+0	Night	16043	271996	4.3507	-0.0593
+8	Morning	16043	316218	4.1076	0.5356
+13	Afternoon	16043	451181	4.1067	0.5128
+7	Morning	16043	241096	3.8480	0.4001
+10	Morning	16043	370579	3.8379	0.3929
+12	Afternoon	16043	431930	3.7810	0.2774
+9	Morning	16043	346551	3.7400	0.4439
+11	Morning	16043	401768	3.7242	0.1711
+1	Night	16043	179904	3.5226	0.1531
+6	Morning	16043	136690	2.5018	0.1595
+2	Night	16043	116976	2.4724	0.1946
+5	Night	16043	71245	1.8845	0.3107
+4	Night	16043	68930	1.8239	0.0650
+3	Night	16043	81999	1.8141	0.0284
+
+====================================================================================================
+RESULT SET 13
+====================================================================================================
+zone_name	borough	trips	revenue	complaints	demand_rank	revenue_rank	complaint_rank	complaint_demand_rank_gap	revenue_demand_rank_gap	revenue_per_trip	complaints_per_1000_trips
+LaGuardia Airport	Queens	1291335	86021679.55	1843	11	2	236	225	9	66.61	1.43
+JFK Airport	Queens	2062433	149783808.31	4226	3	1	221	218	2	72.62	2.05
+Midtown East	Manhattan	1508151	36405418.09	4721	7	8	216	209	1	24.14	3.13
+Penn Station/Madison Sq West	Manhattan	1543150	37949730.24	5320	5	7	208	203	2	24.59	3.45
+Midtown North	Manhattan	1238210	30447739.69	5330	13	10	207	194	3	24.59	4.30
+Lenox Hill East	Manhattan	919287	20614352.76	5065	21	21	212	191	0	22.42	5.51
+Battery Park City	Manhattan	309037	9401318.08	2190	44	41	232	188	3	30.42	7.09
+Central Park	Manhattan	639030	14419119.85	4153	32	32	222	190	0	22.56	6.50
+Meatpacking/West Village West	Manhattan	495840	11940432.29	3621	38	36	225	187	2	24.08	7.30
+Sutton Place/Turtle Bay North	Manhattan	758968	16931903.03	5025	25	26	213	188	1	22.31	6.62
+Hudson Sq	Manhattan	245740	5988034.44	2973	47	48	228	181	1	24.37	12.10
+Upper East Side South	Manhattan	2125550	43564381.74	7122	1	4	178	177	3	20.50	3.35
+UN/Turtle Bay South	Manhattan	523676	12601825.47	5020	37	35	214	177	2	24.06	9.59
+Stuy Town/Peter Cooper Village	Manhattan	105932	2238433.95	2290	58	64	231	173	6	21.13	21.62
+Seaport	Manhattan	112022	3112723.42	3100	56	55	227	171	1	27.79	27.67
+SoHo	Manhattan	416708	9989466.45	5193	39	39	210	171	0	23.97	12.46
+Garment District	Manhattan	677178	16299218.51	6032	30	28	199	169	2	24.07	8.91
+Lincoln Square West	Manhattan	540607	11388173.39	5909	35	38	200	165	3	21.07	10.93
+Financial District South	Manhattan	173436	5233545.08	5000	50	49	215	165	1	30.18	28.83
+Midtown Center	Manhattan	2089736	52074500.20	7826	2	3	166	164	1	24.92	3.74
+Kew Gardens Hills	Queens	6853	201546.51	30872	179	185	21	158	6	29.41	4504.89
+Yorkville East	Manhattan	641069	13838901.40	6362	31	33	190	159	2	21.59	9.92
+Upper East Side North	Manhattan	1874790	38930332.65	8026	4	6	161	157	2	20.77	4.28
+World Trade Center	Manhattan	252043	7588121.89	5809	46	45	201	155	1	30.11	23.05
+West Chelsea/Hudson Yards	Manhattan	882753	21153500.12	7295	22	19	175	153	3	23.96	8.26
+
+====================================================================================================
+RESULT SET 14
+====================================================================================================
+total_taxi_trips	total_revenue	total_complaints	gold_rows
+48617295	1306369662.27	3603396	2303880
